@@ -1,2 +1,2 @@
 # randy_robinson
-This is my read me.
+This is my repo for training.
