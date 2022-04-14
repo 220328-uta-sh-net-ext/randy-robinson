@@ -2,7 +2,7 @@
 
 
 Console.WriteLine("Hello, would you like to say something?");
-var bullStuff= Console.Readline();
+var bullStuff= Console.ReadLine();
 Console.Write("Please enter a number ");
 var x=Convert.ToDouble(Console.ReadLine());
 Console.Write("Please enter another number ");
