@@ -7,8 +7,8 @@ namespace Classes
     public class Anagram
     {
         //properties of Anagram
-        // string s1;
-        //string s2;
+        // char[]inputStr1;
+        // char[]inputStr2;
         
 
         
@@ -22,7 +22,7 @@ namespace Classes
             if(s1.Length== s2.Length)
             {
                 //Taking the first Char[] in 
-                for(int i= 0; i<=inputStr1.Length; i++)
+                for(int i= 0; i<=inputStr1.Length-1; i++)
                 {
                         char jumpto= 'a';
                         char jumpout= 'b';

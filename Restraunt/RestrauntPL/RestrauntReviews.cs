@@ -11,7 +11,7 @@
     abstract class RestrauntReviews
     {
         public string ReviewId { get; set; }
-        public string ReviewName { get; set; }
+        public string ReviewName { get ; set; }
         public int ReviewCount { get; set; }
         public float ReviewScore { get; set; }
             
