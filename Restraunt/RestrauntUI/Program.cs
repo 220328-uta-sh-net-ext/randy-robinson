@@ -17,6 +17,4 @@
 
 using System;
 using RestrauntUI;
-using RestrauntDL;
-using RestrauntBL;
 

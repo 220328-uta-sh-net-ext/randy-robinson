@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestrauntUI;
 // -display details of a restaurant for user
 namespace RestrauntUI
 {
@@ -11,9 +12,8 @@ namespace RestrauntUI
     public class DisplayMenu
     {   //Listing Available global variables:
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
+        public string RestrauntName { get; set; }
+        public List MenuT { get; set; } // not fixed yet.. Done for the night(04/15)
 
 
     }

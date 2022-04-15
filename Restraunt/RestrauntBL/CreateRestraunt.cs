@@ -1,4 +1,5 @@
-﻿namespace RestrauntDL// This is the Data Logic of Restraunt
+﻿using RestrauntDL;
+namespace RestrauntDL// This is the Data Logic of Restraunt
 {
     public class CreateRestraunt
     {
@@ -10,6 +11,14 @@
         public string Menu { get; set; }//This is for setting up Customer Menu
         public string Employee { get; set; }//This is to check if there is an employee
         public string UserName { get; set; }//This is to set and check if there is a Username.
+        public CreateRestraunt()
+        {
+            //Reviewing nullable cases to see if applicable
+            FirstName= "Jimmy";
+            LastName= "RaceCarDriver";
+            UserName = "Havelpot";
+
+        }
 
     }
 }
