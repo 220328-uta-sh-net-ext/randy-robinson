@@ -1,4 +1,4 @@
-﻿namespace RestrauntBL
+﻿namespace RestrauntDL
 {
     public class CreateUser : CreateRestraunt
     {
@@ -7,5 +7,6 @@
             this.FirstName = FirstName;
             this.LastName = LastName;
         }
+
     }
 }

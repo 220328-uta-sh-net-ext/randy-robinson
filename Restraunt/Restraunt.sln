@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntUI", "RestrauntUI\RestrauntUI.csproj", "{1B9719E2-8896-456D-93E2-BACF192A2FCE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntBL", "RestrauntBL\RestrauntBL.csproj", "{91BCA06C-A711-4E04-BDC4-865C71D0CC06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntDL", "RestrauntBL\RestrauntDL.csproj", "{91BCA06C-A711-4E04-BDC4-865C71D0CC06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntDL", "RestrauntPL\RestrauntDL.csproj", "{C824D127-ED6B-4FE3-890B-9362C73D6B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntBL", "RestrauntPL\RestrauntBL.csproj", "{C824D127-ED6B-4FE3-890B-9362C73D6B2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
