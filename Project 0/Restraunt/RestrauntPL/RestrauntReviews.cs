@@ -1,5 +1,5 @@
 ﻿
-using RestrauntDL;
+using RestrauntModel;
 namespace RestrauntBL // This is the Business Logic for Restraunt
 {
     /* add a new user
@@ -20,11 +20,11 @@ namespace RestrauntBL // This is the Business Logic for Restraunt
         // Code snipit taken and modified. Created by @pushpinder 
        
         // AddUser -> an abstract method with only method declaration and no implementation
-        public abstract void Add(RestrauntDL.Employee employee);
-        public abstract void Add(RestrauntDL.UserName userName);
-        public abstract void Remove(RestrauntDL.Employee employee);
+        public abstract void Add(RestrauntModel.Employee employee);
+        public abstract void Add(RestrauntModel.UserName userName);
+        public abstract void Remove(RestrauntModel.Employee employee);
         //RemoveUser -> method to remove user.
-        public abstract void Delete(RestrauntDL.UserName userName);
+        public abstract void Delete(RestrauntModel.UserName userName);
         //FindRestaunt : // This will take in a string and compare if the restraunts names match. If the they match return a value
         public abstract RestrauntBL.ReviewName SearchRestraunt(StringComparer comparer);
 

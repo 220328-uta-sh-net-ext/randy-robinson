@@ -11,10 +11,10 @@ namespace RestrauntUI
 
     public class DisplayMenu
     {   //Listing Available global variables:
-
         public string RestrauntName { get; set; }
-        public List MenuT { get; set; } // not fixed yet.. Done for the night(04/15)
 
 
+        
+        
     }
 }
