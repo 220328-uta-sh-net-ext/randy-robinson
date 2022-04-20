@@ -14,7 +14,10 @@
  * 
  * 
  **/
-
+global using Serilog;
 using System;
 using RestrauntUI;
+//create and configure our logger
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("");
 
