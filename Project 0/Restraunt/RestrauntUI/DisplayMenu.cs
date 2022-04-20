@@ -12,6 +12,10 @@ namespace RestrauntUI
     public class DisplayMenu
     {   //Listing Available global variables:
         public string RestrauntName { get; set; }
+        public string RestrauntMenu { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string UserName { get; set; }
 
 
         
