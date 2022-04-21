@@ -12,13 +12,18 @@ namespace UserModel
             LastName= lastName;
             UserName= userName;
             //This will check if the name is in use first
-            UserNameInUse();
-            if (!UserNameInUse())
+            try
             {
-                UserNameInitialize();
-            }
-            else { } // I will return to this else statement.
-                
+                UserNameInUse(userName);
+                if (!UserNameInUse(userName))
+                {
+                    UserNameInitialize();
+                }
+                else
+                {
+                    throw ArgumentOutOfRangeException("I'm sorry you will need enter another UserName {userName} Is in use.\n ");
+                }; // I will return to this else statement.
+            }    
         }
         //This member will create a User name and check to see if in use
         public void UserNameInitialize() { }
@@ -27,7 +32,13 @@ namespace UserModel
         public void UserNameUpdate() { }
         
         //This member will allow for UserName already in Use and return a bool value
-        public bool UserNameInUse() { return true; }
+        public bool UserNameInUse(string usrName) { 
+            
+            
+            return true;
+        }
+        public string AddToUserNameDirectory(string usrName) { return null; }
+
 
     }
 }
