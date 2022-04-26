@@ -11,18 +11,28 @@ namespace RestrauntUI
 
     public class DisplayMenu
     {
-
-     
+        // Create Menu for user to 
         public string RestrauntName { get; set; }
-        public string RestrauntMenu { get; set; }
+        public int RestrauntRating { get; set; }
+        public DisplayMenu( string restrauntName, int restrauntRating)
+        {
+            restrauntName = this.RestrauntName;
+            restrauntRating= this.RestrauntRating;
+            Start();
+        }
 
-     // After reviewing project zero template it was decided: For project0 we are not intergrating a creation of a user
-     /* public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string UserName { get; set; }
-     **/
+        public void Start()
+        {
+            Console.WriteLine("Welcome to Restaurant Reviews!");
+        }
 
-        
-        
+        // After reviewing project zero template it was decided: For project0 we are not intergrating a creation of a user
+        /* public string LastName { get; set; }
+           public string FirstName { get; set; }
+           public string UserName { get; set; }
+        **/
+
+
+
     }
 }
