@@ -10,9 +10,9 @@ namespace RestrauntUI
     // The following code fragments or other commented out fragments are subject to change (As I am creating application).
 
     public class DisplayMenu
-    {   
-        
-     
+    {
+
+        public string FirstName { get; set; }
         public string RestrauntName { get; set; }
         public string RestrauntMenu { get; set; }
 

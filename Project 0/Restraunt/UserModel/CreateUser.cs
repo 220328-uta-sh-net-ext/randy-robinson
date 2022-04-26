@@ -7,10 +7,10 @@ namespace UserModel
         
         public void NewUser ( string firstName, string lastName, string userName)
         {
-              
-            FirstName= firstName;
-            LastName= lastName;
-            UserName= userName;
+
+            firstName = this.FirstName;
+            lastName = this.LastName;
+            userName= this.UserName;
             //This will check if the name is in use first
             try
             {
