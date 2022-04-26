@@ -34,10 +34,17 @@ namespace UserModel
         //This member will allow for UserName already in Use and return a bool value
         public bool UserNameInUse(string usrName) { 
             
-            
-            return true;
+            if (!UserNameInUse(usrName))
+                return false;
+            else
+                UserNameInitialize();
+                AddToUserNameDirectory(usrName);
+                return true;
         }
-        public string AddToUserNameDirectory(string usrName) { return null; }
+        public void AddToUserNameDirectory(string usrName) {
+        
+            
+        }
 
 
     }
