@@ -10,7 +10,7 @@ namespace RestrauntBL // This is the Business Logic for Restraunt
     - view reviews of restaurants as a user
     - calculate reviews’ average rating for each restraunt
     - search restraunt (by name, rating, zip code, etc.)*/
-    abstract class RestrauntReviews
+    abstract class RestaurantReviews
     {
         public string ReviewId { get; set; }
         public string ReviewName { get ; set; }

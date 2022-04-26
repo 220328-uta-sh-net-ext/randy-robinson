@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RestrauntBL\RestrauntModel.csproj" />
+    <ProjectReference Include="..\RestrauntBL\RestaurantModel.csproj" />
   </ItemGroup>
 
 </Project>

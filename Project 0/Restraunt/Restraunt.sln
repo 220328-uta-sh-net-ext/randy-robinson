@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntUI", "RestrauntUI\RestrauntUI.csproj", "{1B9719E2-8896-456D-93E2-BACF192A2FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantUI", "RestrauntUI\RestaurantUI.csproj", "{1B9719E2-8896-456D-93E2-BACF192A2FCE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntModel", "RestrauntBL\RestrauntModel.csproj", "{91BCA06C-A711-4E04-BDC4-865C71D0CC06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantModel", "RestrauntBL\RestaurantModel.csproj", "{91BCA06C-A711-4E04-BDC4-865C71D0CC06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestrauntBL", "RestrauntPL\RestrauntBL.csproj", "{C824D127-ED6B-4FE3-890B-9362C73D6B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantBL", "RestrauntPL\RestaurantBL.csproj", "{C824D127-ED6B-4FE3-890B-9362C73D6B2F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserModel", "UserModel\UserModel.csproj", "{C65A7665-BA0D-4AEB-AFDC-E1C2C744627D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewModels", "ReviewModels\ReviewModels.csproj", "{8B406AA8-38B7-494A-B702-7950FB29DBBC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRestraunt", "TestRestraunt\TestRestraunt.csproj", "{1E0DE1D8-4BB0-40F5-AD60-CF77E1E46A7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRestaurant", "TestRestraunt\TestRestaurant.csproj", "{1E0DE1D8-4BB0-40F5-AD60-CF77E1E46A7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestrauntDL", "RestrauntDL\RestrauntDL.csproj", "{B5B026D8-AB8C-498A-8249-E3C773504139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantDL", "RestrauntDL\RestaurantDL.csproj", "{B5B026D8-AB8C-498A-8249-E3C773504139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
