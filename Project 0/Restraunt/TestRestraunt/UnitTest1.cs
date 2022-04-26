@@ -8,6 +8,7 @@ namespace TestRestraunt
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
