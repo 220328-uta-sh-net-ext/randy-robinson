@@ -12,7 +12,7 @@ namespace RestrauntUI
     public class DisplayMenu
     {
 
-        public string FirstName { get; set; }
+     
         public string RestrauntName { get; set; }
         public string RestrauntMenu { get; set; }
 

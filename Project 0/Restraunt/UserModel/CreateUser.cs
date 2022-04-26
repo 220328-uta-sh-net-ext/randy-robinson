@@ -7,7 +7,7 @@ namespace UserModel
         
         public void NewUser ( string firstName, string lastName, string userName)
         {
-
+            //Creation of Object NewUser not in use.
             firstName = this.FirstName;
             lastName = this.LastName;
             userName= this.UserName;
