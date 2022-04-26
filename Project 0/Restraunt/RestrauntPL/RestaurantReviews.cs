@@ -27,7 +27,7 @@ namespace RestrauntBL // This is the Business Logic for Restraunt
         // Code snipit taken and modified. Created by @pushpinder 
        
         // AddUser -> an abstract method with only method declaration and no implementation
-        public abstract void AddRestaurant(UserName employee);
+        public abstract void AddUser(UserName employee);
         public abstract void Add(RestrauntBL.RestrauntName userName);
         public abstract void Update(RestrauntModel.Employee employee);
         public abstract void Remove(RestrauntModel.Employee employee);

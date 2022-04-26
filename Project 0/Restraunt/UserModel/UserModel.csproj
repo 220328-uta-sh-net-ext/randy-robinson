@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RestrauntBL\RestaurantModel.csproj" />
+    <ProjectReference Include="..\RestrauntPL\RestaurantBL.csproj" />
     <ProjectReference Include="..\RestrauntUI\RestaurantUI.csproj" />
   </ItemGroup>
 
