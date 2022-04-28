@@ -3,18 +3,21 @@ using RestrauntModel;
 using RestrauntBL;
 namespace UserModel
 {
-    public class CreateUser
+    public class CreateUser <T>
     { 
         //This member will create a User name and check to see if in use
         public void UserNameInitialize() {
             //There is more information needed for this logic.
-            CreateUser iamNew = new CreateUser(FirstName, LastName, UserName);
+            CreateUser iAmNew = new CreateUser(FirstName, LastName, UserName);
+            UserNameUpdate
             
         }
         
         //This member will allow for User name changes
-        public void UserNameUpdate() { }
-        
+        //public List<T> UserNameUpdate<List> (T yeahINew, ) { }
+        public List <T> Users { get; set; }
+        public void 
+
         //This member will allow for UserName already in Use and return a bool value
         public bool UserNameInUse(string usrName) { 
             
