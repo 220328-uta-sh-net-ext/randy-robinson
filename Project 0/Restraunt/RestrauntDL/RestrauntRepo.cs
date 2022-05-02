@@ -3,9 +3,9 @@ using ReviewModels;
 
 namespace RestrauntDL
 {
-    public class FileRepo : IFileRepo
+    public class RestrauntRepo : IRestrauntRepo
     {
-        public FileRepo()
+        public RestrauntRepo()
         { }
 
         private string filePath = "../../../RestDL/Restaurants.json";
@@ -36,7 +36,7 @@ namespace RestrauntDL
         }
     }
 
-    public interface IFileRepo
+    public interface IRestrauntRepo
     {
     }
 }
