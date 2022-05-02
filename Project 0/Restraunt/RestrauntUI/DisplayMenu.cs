@@ -4,20 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestrauntUI;
+using RestrauntBL;
 // -display details of a restaurant for user
 namespace RestrauntUI
 {
     // The following code fragments or other commented out fragments are subject to change (As I am creating application).
 
-    public class DisplayMenu
+    public class DisplayMenu 
     {
         // Create Menu for user to 
-        public string RestrauntName { get; set; }
-        public int RestrauntRating { get; set; }
+        private string RestrauntName { get; set; }
+        private int RestrauntRating { get; set; }
+        Restaurant starterRestaurant= new Restaurant();
         public DisplayMenu( string restrauntName, int restrauntRating)
         {
-            restrauntName = this.RestrauntName;
-            restrauntRating= this.RestrauntRating;
+            RestrauntName= restrauntName;
+            RestrauntRating= restrauntRating;
             Start();
         }
 
@@ -41,7 +43,7 @@ namespace RestrauntUI
                 if(pressPlay!= "N")
                 {
                     // Write logic to create new user
-                    CreateUser iamNew= new CreateUser();
+                    //CreateUser iamNew= new CreateUser();
                 }
                 else if(pressPlay== "N")
                 {

@@ -1,4 +1,7 @@
-﻿namespace RestrauntDL
+﻿using RestrauntBL;
+using ReviewModels;
+
+namespace RestrauntDL
 {
     public class FileRepo : IFileRepo
     {
@@ -31,5 +34,9 @@
         {
             throw new NotImplementedException();
         }
+    }
+
+    public interface IFileRepo
+    {
     }
 }

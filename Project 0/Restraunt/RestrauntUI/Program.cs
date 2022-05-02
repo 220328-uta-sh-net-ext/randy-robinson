@@ -17,7 +17,10 @@
 global using Serilog;
 using System;
 using RestrauntUI;
-//create and configure our logger
-Log.Logger Ylogg= new LoggerConfiguration()
-    .WriteTo.File("");
+using RestrauntBL;
 
+/**create and configure our logger
+Log.Logger Ylogg= new LoggerConfiguration()
+    .WriteTo.File("");**/
+Restaurant imNewRestraunt= new Restaurant();
+imNewRestraunt.RestaurantName = "nextTacoTruck";
