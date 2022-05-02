@@ -12,23 +12,25 @@ namespace RestrauntBL // This is the Business Logic for Restraunt
     - search restraunt (by name, rating, zip code, etc.)*/
     public class Restaurant
     {
+        private int restaurantRating;
+
         //Properties of Restaurant
-       
+
         public string RestaurantName { get; set; }
         public int ReviewCount { get; }
-        public float RestaurantRating { get; }
+        public int RestaurantRating { get => restaurantRating; set => restaurantRating = value; }
         public string RestaurantCity { get; set; }
         public string RestaurantState { get; set; }
         public int RestaurantZip { get; set; }
         public string Review { get; set; }//This is for setting up Customer Reviews if they would like to participate etc...
         public string Menu { get; set; }//This is for setting up Customer Menu
-        // AddUser -> an abstract method with only method declaration and no implementation
-        
+                                        // AddUser -> an abstract method with only method declaration and no implementation
+
         public void AddRestraunt(string restrauntName) { }
-      
+
         //FindRestaunt : // This will take in a string and compare if the restraunts names match.
-       
-        public Restaurant() 
+
+        public Restaurant()
         {
             RestaurantName = "thisTacoStand";
             ReviewCount = 0;
@@ -38,7 +40,7 @@ namespace RestrauntBL // This is the Business Logic for Restraunt
             RestaurantZip = 64155;
 
         }
-        
+
 
     }
 }
