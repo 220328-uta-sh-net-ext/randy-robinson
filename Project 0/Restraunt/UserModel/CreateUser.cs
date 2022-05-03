@@ -5,25 +5,23 @@ using RestrauntBL;
 
 namespace UserModel
 {
-    public class CreateUser <T>
+    public class CreateUser 
     {
 
         //Private properties of this class.
         private string UserName { get; set; }
         private string FirstName { get; set; }
         public string LastName { get; set; }
-        public void AddUser() { }
         public void UpdateUserName(string userName) { }
         //RemoveUser -> method to remove user.
         public void DeleteUserName() { }
         //This member will create a User name and check to see if in use
         // I will need an interface to handle UserModel and ReviewModel
-        public void UserNameInitialize() { }
+        public List<CreateUser>? usrName= UserNameInitialize(string usrName ) { }
         
         //This member will allow for User name changes
         //public List<T> UserNameUpdate<List> (T yeahINew, ) { }
-        public List <T> Users { get; set; }
-        //public void 
+ 
 
         //This member will allow for UserName already in Use and return a bool value
         public bool UserNameInUse(string usrName) { 
@@ -42,19 +40,19 @@ namespace UserModel
         
             
         }
+        public CreateUser() { }
+        
         public CreateUser(string firstName, string lastName, string userName)
         {
             //Creation of Object NewUser not in use.
-            firstName = this.FirstName;
-            lastName = this.LastName;
-            userName = this.UserName;
+            FirstName= firstName;
+            LastName= lastName;
+            UserName= userName;
             //This will check if the name is in use first
-            
-            
-                UserNameInUse(userName);
+            UserNameInUse(userName);
                 if (!UserNameInUse(userName))
                 {
-                    UserNameInitialize();
+                    UserNameInitialize(userName);
                 }
                 else
                 {

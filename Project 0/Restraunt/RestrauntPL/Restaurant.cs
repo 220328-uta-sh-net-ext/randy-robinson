@@ -33,7 +33,7 @@ namespace RestrauntBL // This is the Business Logic for Restraunt
         public Restaurant()
         {
             RestaurantName = "thisTacoStand";
-            ReviewCount = 0;
+           // ReviewCount = 0;
             RestaurantRating = 0;
             RestaurantCity = "Macomb";
             RestaurantState = "IL";

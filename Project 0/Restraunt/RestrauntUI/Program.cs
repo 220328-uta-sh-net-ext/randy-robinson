@@ -24,3 +24,4 @@ Log.Logger Ylogg= new LoggerConfiguration()
     .WriteTo.File("");**/
 Restaurant imNewRestraunt= new Restaurant();
 imNewRestraunt.RestaurantName = "nextTacoTruck";
+Console.WriteLine($"Did this work?" );
