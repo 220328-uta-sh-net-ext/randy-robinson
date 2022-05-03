@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestrauntBL;
+using UserModel;
 
 namespace RestaurantDL
 {
@@ -59,6 +60,7 @@ namespace RestaurantDL
 
             // TODO: leaving out the abilities for now
             var restaurant = new List<Restaurant>();
+            //var newUser= new List<CreateUser>();
             // reader.Read advances the "cursor" to the next row
             // and returns true if it's not at the end of the data.
             while (reader.Read())
@@ -108,6 +110,31 @@ namespace RestaurantDL
             }
             return restaurants;
         }
+        public List<CreateUser> createUsers()
+        {
+            string commandString = "SELECT * FROM Users;";
+
+            using SqlConnection connection = new(connectionString);
+            using SqlCommand command = new(commandString, connection);
+            IDataAdapter adapter = new SqlDataAdapter(command);
+            DataSet dataSet = new();
+            connection.Open();
+            adapter.Fill(dataSet); // this sends the query. DataAdapter uses a DataReader to read.
+            connection.Close();
+
+            var usersList = new List<CreateUser>();
+            DataColumn userColumn = dataSet.Tables[0].Columns[2];
+            foreach (DataRow row in dataSet.Tables[0].Rows)
+            {
+                usersList.Add(new CreateUser                 {
+                    UserTagNumber= (int)row[userColumn],
+                    UserName = (string)row[3],
+                    FirstName= (string)row[4],
+                    LastName= (string)row[5]
+                });
+            }
+            return usersList;
+        }
 
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {
@@ -125,6 +152,22 @@ namespace RestaurantDL
             command.ExecuteNonQuery();
 
             return restaurantToAdd;
+        }
+        public CreateUser AddUser(CreateUser createUser)
+        {
+            string commandString = "INSERT INTO Users (UserTagNumber, UserName, FirstName, LastName) " +
+                     "VALUES (@userTag, @usrName, @firstName, @lastName);";
+
+            using SqlConnection connection = new(connectionString);
+            using SqlCommand command = new(commandString, connection);
+            command.Parameters.AddWithValue("@userTag", createUser.UserTagNumber++);
+            command.Parameters.AddWithValue("@usrName", createUser.UserName);
+            command.Parameters.AddWithValue("@firstName", createUser.FirstName);
+            command.Parameters.AddWithValue("@lastName", createUser.LastName);
+            connection.Open();
+            command.ExecuteNonQuery();
+
+            return createUser;
         }
 
         /// <summary>

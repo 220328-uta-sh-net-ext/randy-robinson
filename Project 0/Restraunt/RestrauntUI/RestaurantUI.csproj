@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RestrauntPL\RestaurantBL.csproj" />
+    <ProjectReference Include="..\UserModel\UserModel.csproj" />
   </ItemGroup>
 
 </Project>

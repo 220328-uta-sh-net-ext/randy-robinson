@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RestrauntPL\RestaurantBL.csproj" />
-    <ProjectReference Include="..\RestrauntUI\RestaurantUI.csproj" />
   </ItemGroup>
 
 </Project>
