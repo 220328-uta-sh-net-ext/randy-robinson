@@ -85,7 +85,7 @@ namespace RestaurantDL
 
         public List<Restaurant> GetRestaurants()
         {
-            string commandString = "SELECT * FROM Restraunt;";
+            string commandString = "SELECT * FROM Restaurant.RestaurantID;";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
@@ -112,7 +112,7 @@ namespace RestaurantDL
         }
         public List<CreateUser> createUsers()
         {
-            string commandString = "SELECT * FROM Users;";
+            string commandString = "SELECT * FROM Restraunts.Users;";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
