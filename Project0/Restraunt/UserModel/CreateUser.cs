@@ -30,7 +30,7 @@ namespace UserModel
             UserName = userName;
             FirstName = firstName;
             LastName = lastName;
-            
+               
         }
         
         class AdminCreateUser : CreateUser { }
