@@ -58,7 +58,7 @@ namespace RestaurantDL
             // received over the network.
             using IDataReader reader = command.ExecuteReader();
 
-            // TODO: leaving out the abilities for now
+            
             var restaurant = new List<Restaurant>();
             //var newUser= new List<CreateUser>();
             // reader.Read advances the "cursor" to the next row
@@ -68,7 +68,7 @@ namespace RestaurantDL
                 // different ways to access the data in the current row
                 // - reader[columnName]
                 //      the return type of this is object. probably need to cast the type.
-                // - reader.Get_____(columnIndex)
+                // - reader.Get_____(columnIndex)~
                 //      return type is whatever type you asked for
                 // be aware of DBNull
                 restaurant.Add(new Restaurant
