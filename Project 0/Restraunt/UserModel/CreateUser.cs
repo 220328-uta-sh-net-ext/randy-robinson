@@ -5,13 +5,21 @@ using RestrauntBL;
 
 namespace UserModel
 {
-    public class CreateUser 
+    public class CreateUser
     {
 
         //Private properties of this class.
         private string UserName { get; set; }
         private string FirstName { get; set; }
         public string LastName { get; set; }
+        public enum UserEnum { Admin = 0, Doctor = 1, }
+        public CreateUser()
+        {
+            UserName = " Havelpot ";
+            FirstName = "-";
+            LastName = "-";
+
+        }
     }
 
 }
