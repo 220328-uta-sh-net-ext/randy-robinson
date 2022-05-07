@@ -16,64 +16,39 @@ namespace RestrauntUI
         // Create Menu for user to 
         private string RestrauntName { get; set; }
         private int RestrauntRating { get; set; }
-        Restaurant starterRestaurant= new Restaurant();
 
         public DisplayMenu()
         {
-             Start();
+            Console.WriteLine("Welcome to Restraunt Review App");
+            Console.WriteLine("Please select from the following options: ");
+            Console.Clear();
+            Console.WriteLine("Press <3> To view all Restraunts to review");
+            Console.WriteLine("Press <2> To view all Users");
+            Console.WriteLine("Press <1> Add pokemon to your team");
+            Console.WriteLine("Press <0> Exit");
         }
-        public DisplayMenu( string restrauntName, int restrauntRating)
+        public string UserChoice()
         {
-            RestrauntName= restrauntName;
-            RestrauntRating= restrauntRating;
-            Start();
-        }
+            // Console.ReadLine returns null if redirecting from a file and the file ends
+            if (Console.ReadLine() is not string userInput)
+                throw new InvalidDataException("end of input");
 
-        public void Start()
-        {
-            Console.WriteLine("Welcome to Restaurant Reviews!");
-            Console.Write("Have you used our services before? (Y/N): ");
-            var pressPlay= Console.ReadLine().ToUpper();
-            if(pressPlay== "Y")
+            switch (userInput)
             {
-                Console.WriteLine("Please enter your UserName: ");
-                var userNameCheck = Console.ReadLine();
-                userNameCheck = userNameCheck.ToUpper();
-                
-                
-                //This is my logic I would like to call it directly. ie. UserNameInUse(userName);
-
-            }
-            else 
-            {
-                Console.Write("I'm  sorry, in order to use Restraunt Reviews you will need to create a username. \n Would you like to create a user name? (Y/N): ");
-                pressPlay= Console.ReadLine();// Need GoTo statement to make this better.
-                string userName = pressPlay.ToUpper();
-                if (pressPlay!= "N")
-                {
-                    // Write logic to create new user
-                    Console.Write("Please Enter FirstName: \n");
-                    var firstName= Console.ReadLine();
-                    Console.Write("Please Enter LastName: \n");
-                    var lastName= Console.ReadLine();
-                    Console.WriteLine("Please enter a UserName: \n" + "Please note that Username isn't case sensitive");
-                    CreateUser iamNew= new CreateUser( firstName, lastName, userName);
-                }
-                else if(pressPlay== "N")
-                {
-                    Console.WriteLine("Thank you for your time. Have a wonderful day!");
-                    
-                }
+                case "0":
+                    return "Exit";
+                case "1":
+                    return "AddPokemon";
+                case "2":
+                    return "SearchPokemon";
+                case "3":
+                    return "GetAllPokemons";
+                default:
+                    Console.WriteLine("Please input a valid response");
+                    Console.WriteLine("Please press <enter> to continue");
+                    Console.ReadLine();
+                    return "MainMenu";
             }
         }
-
-        // After reviewing project zero template it was decided: For project0 we are not intergrating a creation of a user
-        /* public string LastName { get; set; }
-           public string FirstName { get; set; }
-           public string UserName { get; set; }
-        **/
-
-
-
     }
 }
