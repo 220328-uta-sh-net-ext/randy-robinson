@@ -14,7 +14,7 @@ namespace RestUI
         void Display();
 
         /// <summary>
-        /// Will record the user's choice and change/route your menu based on that choice
+        /// Will record the user's choice and change/route the menu based on that choice
         /// </summary>
         /// <returns>Return the menu that will change your screen</returns>
         string UserChoice();
