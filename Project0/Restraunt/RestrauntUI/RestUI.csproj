@@ -14,8 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RestrauntDL\RestaurantDL.csproj" />
-    <ProjectReference Include="..\RestrauntPL\RestaurantBL.csproj" />
+    <ProjectReference Include="..\RestrauntDL\RestDL.csproj" />
+    <ProjectReference Include="..\RestrauntPL\RestBL.csproj" />
+    <ProjectReference Include="..\ReviewModels\ReviewModels.csproj" />
     <ProjectReference Include="..\UserModel\UserModel.csproj" />
   </ItemGroup>
 

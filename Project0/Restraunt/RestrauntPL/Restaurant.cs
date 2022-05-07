@@ -1,6 +1,6 @@
 ﻿
-using RestrauntBL;
-namespace RestrauntBL // This is the Business Logic for Restraunt
+using RestBL;
+namespace RestBL // This is the Business Logic for Restraunt
 {
     /* add a new user
     - ability to search user as admin

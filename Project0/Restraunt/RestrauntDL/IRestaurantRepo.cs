@@ -1,11 +1,11 @@
-﻿using RestrauntBL;
+﻿using RestBL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantDL
+namespace RestDL
 {
     /// <summary>
     /// This is the Restraunt Delivery man.

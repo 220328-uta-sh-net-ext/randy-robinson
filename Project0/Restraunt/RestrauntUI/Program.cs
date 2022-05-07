@@ -16,9 +16,8 @@
  **/
 global using Serilog;
 using System;
-using RestrauntUI;
-using RestrauntBL;
-using RestaurantDL;
+using RestBL;
+using RestUI;
 
 /**create and configure our logger
 Log.Logger Ylogg= new LoggerConfiguration()
@@ -26,4 +25,3 @@ Log.Logger Ylogg= new LoggerConfiguration()
 Restaurant imNewRestraunt= new Restaurant();
 imNewRestraunt.RestaurantName = "nextTacoTruck";
 DisplayMenu displayMenu = new DisplayMenu();
-displayMenu.Start();

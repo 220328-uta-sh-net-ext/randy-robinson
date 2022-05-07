@@ -1,5 +1,5 @@
-﻿using RestaurantDL;
-using RestrauntBL;
+﻿using RestDL;
+using RestBL;
 using ReviewModels;
 using System.Text.Json;
 using System.Data;
@@ -11,7 +11,7 @@ namespace RestaurauntDL
     public class RestaurantRepo : IRestaurantRepo
     {
         
-        readonly string filePath = "../../../RestaurantDL/Restaurants.json";
+        readonly string filePath = "../../../RestDL/Restaurants.json";
         string? jsonString;
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {//throw new NotImplementedException();
