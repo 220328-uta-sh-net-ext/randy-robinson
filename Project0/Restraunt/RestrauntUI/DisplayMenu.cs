@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RestrauntUI;
 using RestrauntBL;
 using UserModel;
+using RestaurantUI;
 // -display details of a restaurant for user
 namespace RestrauntUI
 {
     // The following code fragments or other commented out fragments are subject to change (As I am creating application).
 
-    public class DisplayMenu 
+    public class DisplayMenu : IDisplayMenu
     {
         // Create Menu for user to 
         private string RestrauntName { get; set; }
