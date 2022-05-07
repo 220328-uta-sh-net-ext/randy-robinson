@@ -11,11 +11,8 @@ namespace RestUI
 
     public class DisplayMenu : IDisplayMenu
     {
-        // Create Menu for user to 
-        private string RestrauntName { get; set; }
-        private int RestrauntRating { get; set; }
-
-        public DisplayMenu()
+        // Create Menu for user to interact with Restaurant App
+        public void Display()
         {
             Console.WriteLine("Welcome to Restraunt Review App");
             Console.WriteLine("Please select from the following options: ");

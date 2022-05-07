@@ -17,7 +17,7 @@ namespace RestUI
             this.repository = repository;
         }
 
-        public void GetAllPokemons()
+        public void GetRestaurants()
         {
             var restaurants = repository.GetRestaurants();
             foreach (var rest in restaurants)
