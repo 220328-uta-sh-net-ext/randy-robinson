@@ -7,7 +7,7 @@ using RestaurantModels;
 using ThisRestDL;
 namespace ThisRestUI
 {
-    internal class RestrauntOps
+    public class RestrauntOps
     {
         private readonly IRestaurantRepo repository;
 

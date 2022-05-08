@@ -22,6 +22,7 @@ using RestaurantModels;
 using UserModel;
 using ReviewModels;
 using ThisRestDL;
+using ThisRestBL;
 
 
 
@@ -35,8 +36,47 @@ string connectionString = File.ReadAllText(connectionStringFilePath);
 
 IRestaurantRepo repository = new SqlRepository(connectionString);
 IRestaurantLogic logic = new RestaurantLogic(repository);
-RestaurantOps operations = new(repository);
+RestrauntOps operations = new(repository);
 
-Restaurant imNewRestraunt = new Restaurant();
+bool repeat = true;
+IDisplayMenu menu = new DisplayMenu();
+
+while (repeat)
+{
+    menu.Display();
+    string ans = menu.UserChoice();
+
+    switch (ans)
+    {
+        case "SearchPokemon":
+            //call SearchPokemon method
+            Log.Debug("Displaying SearchPokemon menu to the user");
+            menu = new SearchPokemonMenu(logic);
+            break;
+        case "AddPokemon":
+            Log.Debug("Displaying AddPokemon Menu to the user");
+            menu = new AddPokemonMenu(logic);
+            break;
+        case "GetAllPokemons":
+            Log.Debug("Displaying all pokemons to the user");
+            Console.WriteLine("--------------Retreiving all pokemons---------------");
+            operations.GetAllPokemons();
+            break;
+        case "MainMenu":
+            Log.Debug("Displaying Main menu to the user");
+            menu = new MainMenu();
+            break;
+        case "Exit":
+            Log.Debug("Exiting the application");
+            Log.CloseAndFlush();
+            repeat = false;
+            break;
+        default:
+            Console.WriteLine("View does not exist");
+            Console.WriteLine("Please press <enter> to continue");
+            Console.ReadLine();
+            break;
+    }
+
+    Restaurant imNewRestraunt = new Restaurant();
 imNewRestraunt.RestaurantName = "nextTacoTruck";
-DisplayMenu displayMenu = new DisplayMenu();
