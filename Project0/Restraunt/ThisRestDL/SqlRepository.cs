@@ -5,6 +5,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReviewModels;
+using RestaurantModels;
+using UserModel;
+
 
 namespace ThisRestDL
 {
@@ -72,7 +76,7 @@ namespace ThisRestDL
                 restaurant.Add(new Restaurant
                 {
                     RestaurantName = reader.GetString(0),
-                    RestaurantRating = reader.GetInt32(2),
+                    RestaurantAvgRating = reader.GetInt32(2),
                     RestaurantCity = reader.GetString(3),
                     RestaurantState = reader.GetString(4),
                     RestaurantZip = reader.GetInt32(5)
@@ -100,7 +104,7 @@ namespace ThisRestDL
                 restaurants.Add(new Restaurant
                 {
                     RestaurantName = (string)row[0],
-                    RestaurantRating = (int)row[ratingColumn],
+                    RestaurantAvgRating = (int)row[ratingColumn],
                     RestaurantCity = (string)row[3],
                     RestaurantState = (string)row[4],
                     RestaurantZip = (int)row[5]
@@ -145,7 +149,7 @@ namespace ThisRestDL
             command.Parameters.AddWithValue("@restaurantCity", restaurantToAdd.RestaurantCity);
             command.Parameters.AddWithValue("@restaurantState", restaurantToAdd.RestaurantState);
             command.Parameters.AddWithValue("@restaurantZip", restaurantToAdd.RestaurantZip);
-            command.Parameters.AddWithValue("@restaurantCity", restaurantToAdd.RestaurantRating);
+            command.Parameters.AddWithValue("@restaurantCity", restaurantToAdd.RestaurantAvgRating);
             connection.Open();
             command.ExecuteNonQuery();
 
@@ -176,7 +180,7 @@ namespace ThisRestDL
         public Restaurant AddRestaurants(Restaurant restaurantToAdd)
         {
             string commandString = "INSERT INTO Restaurant (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantReview ) " +
-                $"VALUES ({restaurantToAdd.RestaurantName}, thisTacoStand, {restaurantToAdd.RestaurantCity} Macomb, {restaurantToAdd.RestaurantState} IL, {restaurantToAdd.RestaurantZip}, {restaurantToAdd.RestaurantRating};";
+                $"VALUES ({restaurantToAdd.RestaurantName}, thisTacoStand, {restaurantToAdd.RestaurantCity} Macomb, {restaurantToAdd.RestaurantState} IL, {restaurantToAdd.RestaurantZip}, {restaurantToAdd.RestaurantAvgRating};";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
