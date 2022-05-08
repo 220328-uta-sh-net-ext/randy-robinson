@@ -17,6 +17,8 @@
 global using Serilog;
 using System;
 using ThisRestUI;
+using RestaurantModels;
+
 
 /**create and configure our logger
 Log.Logger Ylogg= new LoggerConfiguration()
