@@ -1,10 +1,9 @@
 ﻿using RestDL;
-using RestBL;
-using ReviewModels;
 using System.Text.Json;
 using System.Data;
 using Microsoft.SqlServer;
 using System.Data.SqlClient;
+using RestaurantModels;
 
 namespace RestaurauntDL
 {
@@ -63,7 +62,7 @@ namespace RestaurauntDL
         }
 
 
-        public void AddReview(int restaurantId, Review reviewToAdd)
+        public void AddReview(int restaurantId, ReviewModels.Review reviewToAdd)
         {
             throw new NotImplementedException();
         }

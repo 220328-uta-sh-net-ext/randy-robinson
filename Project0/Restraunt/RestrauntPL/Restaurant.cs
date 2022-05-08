@@ -24,7 +24,7 @@ namespace RestBL // This is the Business Logic for Restraunt
         public int RestaurantZip { get; set; }
         public string Review { get; set; }//This is for setting up Customer Reviews if they would like to participate etc...
         public string Menu { get; set; }//This is for setting up Customer Menu
-                                        // AddUser -> an abstract method with only method declaration and no implementation
+        public int RestaurantIDseed = 334259;                               // AddUser -> an abstract method with only method declaration and no implementation
 
         public void AddRestraunt(string restrauntName) { }
 
@@ -38,7 +38,7 @@ namespace RestBL // This is the Business Logic for Restraunt
             RestaurantCity = "Macomb";
             RestaurantState = "IL";
             RestaurantZip = 64155;
-
+            RestaurantIDseed = RestaurantIDseed++;
         }
 
 

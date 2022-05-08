@@ -10,4 +10,9 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantModels\RestaurantModels.csproj" />
+    <ProjectReference Include="..\RestrauntDL\RestDL.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,7 +7,7 @@ CREATE TABLE Restaurant.RestaurantID(
     RestaurantCity NVARCHAR(50),
     RestaurantState NVARCHAR(5),
     RestaurantZip NVARCHAR(5), 
-    RestaurantReview NVARCHAR(5),
+    RestaurantReview NVARCHAR(5)
 
 )
 CREATE TABLE Restaurant.Users(
