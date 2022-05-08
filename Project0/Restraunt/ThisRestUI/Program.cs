@@ -20,9 +20,12 @@ using ThisRestUI;
 using RestaurantModels;
 
 
-/**create and configure our logger
-Log.Logger Ylogg= new LoggerConfiguration()
-    .WriteTo.File("");**/
+
+//create and configure our logger
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console().MinimumLevel.Debug()
+    .WriteTo.File("./Logs/user.txt").MinimumLevel.Debug().MinimumLevel.Information()// we want to save the ;ogs in this file
+    .CreateLogger();
 Restaurant imNewRestraunt = new Restaurant();
 imNewRestraunt.RestaurantName = "nextTacoTruck";
 DisplayMenu displayMenu = new DisplayMenu();
