@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RestDL;
-using RestBL;
-
-namespace RestUI
+namespace ThisRestUI
 {
     internal class RestrauntOps
     {

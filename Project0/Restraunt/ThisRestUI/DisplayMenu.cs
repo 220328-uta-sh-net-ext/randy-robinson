@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RestUI;
+using ThisRestUI;
 // -display details of a restaurant for user
-namespace RestUI
+namespace ThisRestUI
 {
     // The following code fragments or other commented out fragments are subject to change (As I am creating application).
 

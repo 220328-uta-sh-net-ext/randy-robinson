@@ -3,25 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestUI", "RestrauntUI\RestUI.csproj", "{1B9719E2-8896-456D-93E2-BACF192A2FCE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestBL", "RestrauntPL\RestBL.csproj", "{C824D127-ED6B-4FE3-890B-9362C73D6B2F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserModel", "UserModel\UserModel.csproj", "{C65A7665-BA0D-4AEB-AFDC-E1C2C744627D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewModels", "ReviewModels\ReviewModels.csproj", "{8B406AA8-38B7-494A-B702-7950FB29DBBC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRestaurant", "TestRestraunt\TestRestaurant.csproj", "{1E0DE1D8-4BB0-40F5-AD60-CF77E1E46A7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestDL", "RestrauntDL\RestDL.csproj", "{B5B026D8-AB8C-498A-8249-E3C773504139}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantModels", "RestaurantModels\RestaurantModels.csproj", "{3B7CB1B6-7859-42B5-9C57-AB749E5A3B0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThisRestUI", "ThisRestUI\ThisRestUI.csproj", "{BF114FC0-73D0-4604-B7C1-CBD5ACC14748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThisRestUI", "ThisRestUI\ThisRestUI.csproj", "{BF114FC0-73D0-4604-B7C1-CBD5ACC14748}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThisRestDL", "ThisRestDL\ThisRestDL.csproj", "{8550CCFA-19A0-4E16-8C4C-BAEF147603DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThisRestDL", "ThisRestDL\ThisRestDL.csproj", "{8550CCFA-19A0-4E16-8C4C-BAEF147603DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThisRestBL", "ThisRestBL\ThisRestBL.csproj", "{DC0B67E2-E72B-4A2A-9F5B-E8BD069AC8BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThisRestBL", "ThisRestBL\ThisRestBL.csproj", "{DC0B67E2-E72B-4A2A-9F5B-E8BD069AC8BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1B9719E2-8896-456D-93E2-BACF192A2FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B9719E2-8896-456D-93E2-BACF192A2FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B9719E2-8896-456D-93E2-BACF192A2FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B9719E2-8896-456D-93E2-BACF192A2FCE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C824D127-ED6B-4FE3-890B-9362C73D6B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C824D127-ED6B-4FE3-890B-9362C73D6B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C824D127-ED6B-4FE3-890B-9362C73D6B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C824D127-ED6B-4FE3-890B-9362C73D6B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C65A7665-BA0D-4AEB-AFDC-E1C2C744627D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C65A7665-BA0D-4AEB-AFDC-E1C2C744627D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C65A7665-BA0D-4AEB-AFDC-E1C2C744627D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,10 +35,6 @@ Global
 		{1E0DE1D8-4BB0-40F5-AD60-CF77E1E46A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E0DE1D8-4BB0-40F5-AD60-CF77E1E46A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E0DE1D8-4BB0-40F5-AD60-CF77E1E46A7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5B026D8-AB8C-498A-8249-E3C773504139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5B026D8-AB8C-498A-8249-E3C773504139}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5B026D8-AB8C-498A-8249-E3C773504139}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5B026D8-AB8C-498A-8249-E3C773504139}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B7CB1B6-7859-42B5-9C57-AB749E5A3B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B7CB1B6-7859-42B5-9C57-AB749E5A3B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B7CB1B6-7859-42B5-9C57-AB749E5A3B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
