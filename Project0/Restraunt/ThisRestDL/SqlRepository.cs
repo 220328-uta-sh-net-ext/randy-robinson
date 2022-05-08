@@ -5,10 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RestBL;
-using UserModel;
 
-namespace RestDL
+namespace ThisRestDL
 {
     public class SqlRepository : IRestaurantRepo
     {

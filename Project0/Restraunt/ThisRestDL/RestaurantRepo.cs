@@ -1,16 +1,15 @@
-﻿using RestDL;
+﻿using ThisRestDL;
 using System.Text.Json;
 using System.Data;
 using Microsoft.SqlServer;
 using System.Data.SqlClient;
-using RestaurantModels;
 
-namespace RestaurauntDL
+namespace ThisRestDL
 {
     public class RestaurantRepo : IRestaurantRepo
     {
-        
-        readonly string filePath = "../../../RestDL/Restaurants.json";
+
+        readonly string filePath = "../../../ThisRestDL/Restaurants.json";
         string? jsonString;
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {//throw new NotImplementedException();
@@ -76,6 +75,6 @@ namespace RestaurauntDL
         {
             throw new NotImplementedException();
         }
-  
+
     }
 }

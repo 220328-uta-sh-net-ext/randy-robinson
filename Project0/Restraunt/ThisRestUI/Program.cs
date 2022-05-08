@@ -16,7 +16,6 @@
  **/
 global using Serilog;
 using System;
-using RestBL;
 using ThisRestUI;
 
 /**create and configure our logger
