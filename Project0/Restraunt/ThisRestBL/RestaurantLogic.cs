@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThisRestBL;
+using RestaurantModels;
+using ThisRestDL;
 
 
 namespace ThisRestBL
@@ -21,8 +24,9 @@ namespace ThisRestBL
         {
 
             //Validation process
-            List<Restaurant>? restaurants = repo.GetRestaurants();
-            if (restaurant.Count < MaxRestaurant)
+            List<Restaurant> restaurants = repo.GetRestaurants();
+            
+            if (restaurants.Count < MaxRestaurant)
             {
                 return repo.AddRestaurant(restaurant);
             }
@@ -34,13 +38,10 @@ namespace ThisRestBL
 
         public List<Restaurant> SearchRestaurant(string name)
         {
-
-
             var restaurants = repo.GetRestaurants();
             var filteredRestaurants = restaurants.Where(r => r.RestaurantName.Contains(name)).ToList(); // Method Syntax
 
             return filteredRestaurants;
-
         }
     }
 }

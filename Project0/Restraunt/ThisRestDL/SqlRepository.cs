@@ -136,7 +136,7 @@ namespace ThisRestDL
 
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {
-            string commandString = "INSERT INTO Restaurant (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantRating) " +
+            string commandString = "INSERT INTO Restaurant (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantAvgRating) " +
                 "VALUES (@restaurantName, @restaurantCity, @restaurantState, @restaurantZip, @restaurantRating);";
 
             using SqlConnection connection = new(connectionString);
