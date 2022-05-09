@@ -9,14 +9,15 @@ namespace ThisRestUI
 {
     // The following code fragments or other commented out fragments are subject to change (As I am creating application).
 
-    public class DisplayMenu : IDisplayMenu
+    public class DisplayMenuStart : IDisplayMenu
     {
         // Create Menu for user to interact with Restaurant App
         public void Display()
         {
             Console.WriteLine("Welcome to Restraunt Review App");
             Console.WriteLine("Please select from the following options: ");
-            Console.Clear();
+            //Console.Clear();
+            Console.WriteLine("Press <4> Add a NewUser to app");
             Console.WriteLine("Press <3> To view all Restraunts to review");
             Console.WriteLine("Press <2> To view all Users");
             Console.WriteLine("Press <1> Add a Restraunt to app");
@@ -35,9 +36,11 @@ namespace ThisRestUI
                 case "1":
                     return "AddRestaurant";
                 case "2":
-                    return "SearchPokemon";
+                    return "SearchUsers";
                 case "3":
-                    return "GetAllPokemons";
+                    return "SearchRestaurant";
+                case "4":
+                    return "AddUser";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press <enter> to continue");

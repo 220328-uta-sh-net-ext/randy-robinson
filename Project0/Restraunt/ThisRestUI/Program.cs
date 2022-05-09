@@ -29,7 +29,7 @@ using ThisRestBL;
 //create and configure our logger
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console().MinimumLevel.Debug()
-    .WriteTo.File("./Logs/user.txt").MinimumLevel.Debug().MinimumLevel.Information()// we want to save the ;ogs in this file
+    .WriteTo.File("../../../../ThisRestUI/user.txt").MinimumLevel.Debug().MinimumLevel.Information()// we want to save the ;ogs in this file
     .CreateLogger();
 string connectionStringFilePath = "../../../../ThisRestDL/thisCommandString.txt";
 string connectionString = File.ReadAllText(connectionStringFilePath);
@@ -39,7 +39,7 @@ IRestaurantLogic logic = new RestaurantLogic(repository);
 RestrauntOps operations = new(repository);
 
 bool repeat = true;
-IDisplayMenu menu = new DisplayMenu();
+IDisplayMenu menu = new DisplayMenuStart();
 
 while (repeat)
 {
@@ -64,7 +64,7 @@ while (repeat)
             break;
         case "MainMenu":
             Log.Debug("Displaying Main menu to the user");
-            menu = new DisplayMenu();
+            menu = new DisplayMenuStart();
             break;
         case "Exit":
             Log.Debug("Exiting the application");

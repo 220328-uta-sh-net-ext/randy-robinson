@@ -64,7 +64,7 @@ namespace ThisRestUI
                 case "2":
                     Console.Write("Please enter a Review : 1 through 5 <5> being the highest review");
                     thisReview.Rating = Convert.ToInt32(Console.ReadLine());
-                    return "AddReview";// will update Review models to reflect change.
+                    return "AddReview";
                 case "3":
                     Console.Write("Please enter a name! ");
                     if (Console.ReadLine() is string input)
