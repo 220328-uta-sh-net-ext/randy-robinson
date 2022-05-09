@@ -1,0 +1,24 @@
+[
+  {
+    "RestaurantName": "thisTacoStand",
+    "RestaurantCity": "Macomb",
+    "RestaurantState": "IL",
+    "RestaurantZip": 64155
+  },
+  [
+    {
+      "RestaurantName": "TacoBell",
+      "RestaurantCity": "Macomb",
+      "RestaurantState": "IL",
+      "RestaurantZip": 64155
+    }
+  ],
+  [
+    {
+      "RestaurantName": "Wendy's'",
+      "RestaurantCity": "Macomb",
+      "RestaurantState": "IL",
+      "RestaurantZip": 64155
+    }
+  ]
+]
