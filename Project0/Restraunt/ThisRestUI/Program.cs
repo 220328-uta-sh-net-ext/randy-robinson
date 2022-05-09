@@ -48,18 +48,18 @@ while (repeat)
 
     switch (ans)
     {
-        case "SearchPokemon":
-            //call SearchPokemon method
-            Log.Debug("Displaying SearchPokemon menu to the user");
+        case "SearchRestaurant":
+            //Calling SearchRestaurantMenu method
+            Log.Debug("Displaying SearchRestaurant menu to the user");
             menu = new SearchRestaurantMenu(logic);
             break;
-        case "AddPokemon":
-            Log.Debug("Displaying AddPokemon Menu to the user");
+        case "AddRestaurant":
+            Log.Debug("Displaying AddRestaurant Menu to the user");
             menu = new AddRestaurantMenu(logic); 
             break;
-        case "GetAllPokemons":
+        case "GetRestaurants":
             Log.Debug("Displaying all pokemons to the user");
-            Console.WriteLine("--------------Retreiving all pokemons---------------");
+            Console.WriteLine("&&----       Retreiving all restaurants       ----&&");
             operations.GetRestaurants();
             break;
         case "MainMenu":

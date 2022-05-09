@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RestaurantModels\RestaurantModels.csproj" />
     <ProjectReference Include="..\ReviewModels\ReviewModels.csproj" />
+    <ProjectReference Include="..\TestRestraunt\TestRestaurant.csproj" />
     <ProjectReference Include="..\ThisRestBL\ThisRestBL.csproj" />
     <ProjectReference Include="..\ThisRestDL\ThisRestDL.csproj" />
     <ProjectReference Include="..\UserModel\UserModel.csproj" />

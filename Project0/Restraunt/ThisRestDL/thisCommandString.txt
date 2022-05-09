@@ -1,1 +1,1 @@
-﻿
+﻿Server=tcp:randyerobinson.database.windows.net,1433;Initial Catalog=RandyERobinson;Persist Security Info=False;User ID=Havelpot;Password=!!nighT001;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
