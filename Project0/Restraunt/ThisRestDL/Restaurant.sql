@@ -11,6 +11,7 @@ CREATE TABLE [dbo].[Users]
     [LastName] NVARCHAR(50) NULL,
     [Password] NVARCHAR(20) NULL
 );
+--Drop table Users
 GO
 CREATE TABLE [dbo].[Restaurants]
 (
@@ -21,6 +22,7 @@ CREATE TABLE [dbo].[Restaurants]
    [RestaurantZip] INT NULL,
    [RestaurantAvgRating] INT NULL
 );
+--Drop table Restaurants
 GO
 CREATE TABLE [dbo].[Reviews]
 (
@@ -29,3 +31,6 @@ CREATE TABLE [dbo].[Reviews]
    [Rating] INT NULL,
    [Note] NVARCHAR(200) NULL 
 );
+--Drop table Reviews
+Select *
+From Restaurants 
