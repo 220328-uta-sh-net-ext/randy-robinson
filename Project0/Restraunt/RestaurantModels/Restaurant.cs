@@ -14,12 +14,11 @@
         public Restaurant()
         {
             RestaurantName = "-";
-            // ReviewCount = 0;
             RestaurantAvgRating = 0;
             RestaurantCity = "Macomb";
             RestaurantState = "IL";
             RestaurantZip = 64155;
-            RestaurantIDseed = RestaurantIDseed++;
+            RestaurantIDseed++;
 
         }
         public override string ToString()

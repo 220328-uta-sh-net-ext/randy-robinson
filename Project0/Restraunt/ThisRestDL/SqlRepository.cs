@@ -140,7 +140,7 @@ namespace ThisRestDL
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {
             string commandString = "INSERT INTO Restaurant (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantAvgRating) " +
-                "VALUES (@restaurantName, @restaurantCity, @restaurantState, @restaurantZip, @restaurantRating);";
+                "VALUES (@restaurantName, @restaurantCity, @restaurantState, @restaurantZip, @restaurantAvgRating);";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
@@ -148,7 +148,7 @@ namespace ThisRestDL
             command.Parameters.AddWithValue("@restaurantCity", restaurantToAdd.RestaurantCity);
             command.Parameters.AddWithValue("@restaurantState", restaurantToAdd.RestaurantState);
             command.Parameters.AddWithValue("@restaurantZip", restaurantToAdd.RestaurantZip);
-            command.Parameters.AddWithValue("@restaurantCity", restaurantToAdd.RestaurantAvgRating);
+            command.Parameters.AddWithValue("@restaurantAvgRating", restaurantToAdd.RestaurantAvgRating);
             connection.Open();
             command.ExecuteNonQuery();
 
