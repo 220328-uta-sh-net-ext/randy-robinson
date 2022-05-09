@@ -1,4 +1,4 @@
-﻿namespace _UserModel
+﻿namespace UserModel
 {
     public class CreateUser
     {
