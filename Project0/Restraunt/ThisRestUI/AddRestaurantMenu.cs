@@ -28,8 +28,12 @@ namespace ThisRestUI
         public void Display()
         {
             Console.WriteLine("Enter Restaurant Information");
-            Console.WriteLine("<3> Name - " + newRestaurant.RestaurantName);
-          //  Console.WriteLine("<2> Review - " + thisReview.Review);
+            Console.WriteLine("<6> RestaurantZip: " + newRestaurant.RestaurantZip);
+            Console.WriteLine("<5> RestaurantState: " + newRestaurant.RestaurantState);
+            Console.WriteLine("<4> RestaurantName: " + newRestaurant.RestaurantName);
+            Console.WriteLine("<3> RestaurantCity: " + newRestaurant.RestaurantCity);
+            Console.WriteLine("<2> ReviewRestaurant: " + thisReview.Rating);
+
             Console.WriteLine("<1> Save");
             Console.WriteLine("<0> Go Back");
         }
@@ -58,8 +62,8 @@ namespace ThisRestUI
                     }
                     return "MainMenu";
                 case "2":
-                    Console.Write("Please enter a Review : 1 through 5 <5> being the highest review Standards ");
-                   // ReviewThis.Review = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Please enter a Review : 1 through 5 <5> being the highest review");
+                    thisReview.Rating = Convert.ToInt32(Console.ReadLine());
                     return "AddReview";// will update Review models to reflect change.
                 case "3":
                     Console.Write("Please enter a name! ");

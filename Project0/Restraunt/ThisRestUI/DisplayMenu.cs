@@ -19,7 +19,7 @@ namespace ThisRestUI
             Console.Clear();
             Console.WriteLine("Press <3> To view all Restraunts to review");
             Console.WriteLine("Press <2> To view all Users");
-            Console.WriteLine("Press <1> Add pokemon to your team");
+            Console.WriteLine("Press <1> Add a Restraunt to app");
             Console.WriteLine("Press <0> Exit");
         }
         public string UserChoice()
@@ -33,7 +33,7 @@ namespace ThisRestUI
                 case "0":
                     return "Exit";
                 case "1":
-                    return "AddPokemon";
+                    return "AddRestaurant";
                 case "2":
                     return "SearchPokemon";
                 case "3":
