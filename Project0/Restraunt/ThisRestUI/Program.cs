@@ -58,7 +58,7 @@ while (repeat)
             menu = new AddRestaurantMenu(logic); 
             break;
         case "GetRestaurants":
-            Log.Debug("Displaying all pokemons to the user");
+            Log.Debug("Displaying all restaurants to the user");
             Console.WriteLine("&&----       Retreiving all restaurants       ----&&");
             operations.GetRestaurants();
             break;

@@ -66,11 +66,29 @@ namespace ThisRestUI
                     thisReview.Rating = Convert.ToInt32(Console.ReadLine());
                     return "AddReview";
                 case "3":
-                    Console.Write("Please enter a name! ");
+                    Console.Write("Please enter a City name: ");
                     if (Console.ReadLine() is string input)
-                        newRestaurant.RestaurantName = input;
+                        newRestaurant.RestaurantCity = input;
                     else
                         throw new InvalidDataException("end of input");
+                    return "AddRestaurant";
+                case "4":
+                    Console.Write("Please enter a name: ");
+                    if (Console.ReadLine() is string input1)
+                        newRestaurant.RestaurantName = input1;
+                    else
+                        throw new InvalidDataException("end of input");
+                    return "AddRestaurant";
+                case "5":
+                    Console.Write("Please enter a name: ");
+                    if (Console.ReadLine() is string input2)
+                        newRestaurant.RestaurantState = input2;
+                    else
+                        throw new InvalidDataException("end of input");
+                    return "AddRestaurant";
+                case "6":
+                    Console.Write("Please enter a name: ");
+                    newRestaurant.RestaurantZip = Convert.ToInt32(Console.ReadLine());
                     return "AddRestaurant";
                 /// Add more cases for any other attributes of pokemon
                 default:

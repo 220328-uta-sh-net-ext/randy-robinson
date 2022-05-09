@@ -16,7 +16,6 @@ namespace ThisRestUI
         {
             Console.WriteLine("Welcome to Restraunt Review App");
             Console.WriteLine("Please select from the following options: ");
-            //Console.Clear();
             Console.WriteLine("Press <4> Add a NewUser to app");
             Console.WriteLine("Press <3> To view all Restraunts to review");
             Console.WriteLine("Press <2> To view all Users");
