@@ -11,7 +11,7 @@
         private bool IsAdmin { get; set; }
         public int UserTagNumber = 3332979;
         public int AdminTag = 3332900;
-        enum UserEnum { Admin = 0, RegUser = 1, }
+        private enum UserEnum { Admin = 0, RegUser = 1, }
         public CreateUser()
         {
             UserTagNumber++;
@@ -29,8 +29,10 @@
             LastName = lastName;
 
         }
-
-        class AdminCreateUser : CreateUser { }
+        public override string ToString()
+        {
+            string result = $"User Name: {UserName}\nFirstName: {FirstName}\nLastName:{LastName}\nUserTagNumber: {UserTagNumber}";
+            return result;
+        }
     }
-
 }

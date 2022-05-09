@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RestaurantModels\RestaurantModels.csproj" />
     <ProjectReference Include="..\ReviewModels\ReviewModels.csproj" />
+    <ProjectReference Include="..\_UserModel\UserModel.csproj" />
   </ItemGroup>
 
 </Project>

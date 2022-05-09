@@ -9,7 +9,6 @@ using ReviewModels;
 using RestaurantModels;
 using UserModel;
 
-
 namespace ThisRestDL
 {
     public class SqlRepository : IRestaurantRepo
