@@ -15,10 +15,10 @@ namespace UserModel
         private bool IsAdmin { get; set; }
         public int UserTagNumber = 3332979;
         public int AdminTag = 3332900;
-        enum UserEnum { Admin= 0 , Doctor = 1 , }
+        enum UserEnum { Admin= 0 , RegUser = 1 , }
         public CreateUser()
         {
-            UserTagNumber = UserTagNumber++;
+            UserTagNumber++;
             UserName = " Havelpot ";
             FirstName = "-";
             LastName = "-";
@@ -34,19 +34,7 @@ namespace UserModel
                
         }
         
-        class AdminCreateUser : CreateUser {
-            UserEnum userAdmin= UserEnum.Admin;
-            public AdminCreateUser() {
-                UserName =  this.UserName;
-                FirstName = this.FirstName;
-                LastName = this.LastName;   
-                Password = this.Password;
-                if (this.IsAdmin)
-                {
-
-                }
-            }
-        }
+        class AdminCreateUser : CreateUser { }
     }
 
 }
