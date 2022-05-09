@@ -26,7 +26,8 @@ CREATE TABLE [dbo].[Restaurants]
 GO
 CREATE TABLE [dbo].[Reviews]
 (
-   [RestaurantName] NVARCHAR(50) NOT NULL PRIMARY KEY,
+   [ReviewID] INT Primary Key,
+   [RestaurantName] NVARCHAR(50) NOT NULL ,
    [Username] NVARCHAR(100) NULL,
    [Rating] INT NULL,
    [Note] NVARCHAR(200) NULL 
@@ -34,3 +35,7 @@ CREATE TABLE [dbo].[Reviews]
 --Drop table Reviews
 Select *
 From Restaurants 
+Select *
+From Reviews
+Select *
+From Users
