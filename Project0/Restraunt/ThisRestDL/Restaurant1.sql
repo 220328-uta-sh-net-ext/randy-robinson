@@ -15,8 +15,8 @@ CREATE TABLE [dbo].[Users]
 GO
 CREATE TABLE [dbo].[Restaurants]
 (
-   [RestaurantIdseed] INT NOT NULL PRIMARY KEY,
-   [RestaurantName] NVARCHAR(50) NULL,
+   [RestaurantIdseed] INT NULL ,
+   [RestaurantName] NVARCHAR(50) not NULL Primary Key,
    [RestaurantCity] NVARCHAR(50) NULL,
    [RestaurantState] NVARCHAR(5) NULL,
    [RestaurantZip] INT NULL,
