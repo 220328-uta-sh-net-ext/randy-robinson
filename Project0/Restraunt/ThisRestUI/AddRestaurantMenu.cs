@@ -12,9 +12,9 @@ using ThisRestBL;
 
 namespace ThisRestUI
 {
-    internal class AddRestaurantMenu : IDisplayMenu
+    public class AddRestaurantMenu : IDisplayMenu
     {
-        //static non-access modifier is needed to keep this variable consistent to all objects we create out of our AddPokeMenu
+        //static non-access modifier is needed to keep this variable consistent to all objects we create out of our AddRestaurantMenu
         private static Restaurant newRestaurant = new Restaurant();
         private static CreateUser newUser = new CreateUser();
         private static Review thisReview = new Review();

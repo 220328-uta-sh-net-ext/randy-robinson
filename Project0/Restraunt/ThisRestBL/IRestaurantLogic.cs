@@ -25,10 +25,16 @@ namespace ThisRestBL
         Restaurant AddRestaurant(Restaurant restaurant);
 
         /// <summary>
-        /// We will give the list of pokemons that are related to searched name
+        /// We will give the list of Restaurant that are related to searched name
         /// </summary>
         /// <param name="restaurantName">This name parameter is used to filter Restaurants</param>
         /// <returns>Give the list of filtered pokemons via name</returns>
         List<Restaurant> SearchRestaurant(string restaurantName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="logic"></param>
+        /// <returns></returns>
+        Restaurant AddRestaurantMenu(IRestaurantLogic logic);
     }
 }

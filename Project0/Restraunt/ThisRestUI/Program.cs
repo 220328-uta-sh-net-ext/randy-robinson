@@ -51,20 +51,20 @@ while (repeat)
         case "SearchPokemon":
             //call SearchPokemon method
             Log.Debug("Displaying SearchPokemon menu to the user");
-            menu = new SearchPokemonMenu(logic);
+            menu = new SearchRestaurantMenu(logic);
             break;
         case "AddPokemon":
             Log.Debug("Displaying AddPokemon Menu to the user");
-            menu = new AddPokemonMenu(logic);
+            menu = new AddRestaurantMenu(logic); 
             break;
         case "GetAllPokemons":
             Log.Debug("Displaying all pokemons to the user");
             Console.WriteLine("--------------Retreiving all pokemons---------------");
-            operations.GetAllPokemons();
+            operations.GetRestaurants();
             break;
         case "MainMenu":
             Log.Debug("Displaying Main menu to the user");
-            menu = new MainMenu();
+            menu = new DisplayMenu();
             break;
         case "Exit":
             Log.Debug("Exiting the application");
@@ -77,6 +77,4 @@ while (repeat)
             Console.ReadLine();
             break;
     }
-
-    Restaurant imNewRestraunt = new Restaurant();
-imNewRestraunt.RestaurantName = "nextTacoTruck";
+}

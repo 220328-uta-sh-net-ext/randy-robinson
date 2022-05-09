@@ -14,12 +14,13 @@ namespace ThisRestBL
     {
         private const int MaxRestaurant = 400;
         private readonly IRestaurantRepo repo;
-
+        private readonly IRestaurantLogic logic;
+        
         public RestaurantLogic(IRestaurantRepo repo)
         {
             this.repo = repo;
         }
-       
+
         public Restaurant AddRestaurant(Restaurant restaurant)
         {
 
@@ -34,6 +35,12 @@ namespace ThisRestBL
             {
                 throw new Exception("You cannot add more than 400 Restraunts to the database.");
             }
+        }
+
+        public Restaurant AddRestaurantMenu(IRestaurantLogic logic)
+        {
+            logic = this.logic;
+            throw new Exception(" ----- ");
         }
 
         public List<Restaurant> SearchRestaurant(string name)
