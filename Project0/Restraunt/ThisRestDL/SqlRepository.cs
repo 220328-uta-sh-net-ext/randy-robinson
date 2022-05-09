@@ -86,7 +86,7 @@ namespace ThisRestDL
 
         public List<Restaurant> GetRestaurants()
         {
-            string commandString = "SELECT * FROM Restaurant.RestaurantID;";
+            string commandString = "SELECT * FROM Restaurant;";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
@@ -113,7 +113,7 @@ namespace ThisRestDL
         }
         public List<CreateUser> createUsers()
         {
-            string commandString = "SELECT * FROM Restraunts.Users;";
+            string commandString = "SELECT * FROM Users;";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
