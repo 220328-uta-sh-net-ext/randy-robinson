@@ -10,7 +10,7 @@
         public string RestaurantState { get; set; }
         public int RestaurantZip { get; set; }
         public string Review { get; set; }
-        public int ?RestaurantIDseed = 334259;
+        public int RestaurantIDseed = 334259;
         public Restaurant()
         {
             RestaurantName = "-";
@@ -18,7 +18,7 @@
             RestaurantCity = "Macomb";
             RestaurantState = "IL";
             RestaurantZip = 64155;
-            RestaurantIDseed= RestaurantIDseed++;
+            RestaurantIDseed++;
 
         }
         public override string ToString()
