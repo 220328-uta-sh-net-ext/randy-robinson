@@ -67,13 +67,13 @@ namespace ThisRestUI
                         newRestaurant.RestaurantName = input;
                     else
                         throw new InvalidDataException("end of input");
-                    return "AddPokemon";
+                    return "AddRestaurant";
                 /// Add more cases for any other attributes of pokemon
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
-                    return "AddPokemon";
+                    return "AddRestaurant";
             }
         }
     }
