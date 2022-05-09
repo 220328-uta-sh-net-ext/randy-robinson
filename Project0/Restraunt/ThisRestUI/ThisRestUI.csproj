@@ -23,7 +23,6 @@
     <ProjectReference Include="..\TestRestraunt\TestRestaurant.csproj" />
     <ProjectReference Include="..\ThisRestBL\ThisRestBL.csproj" />
     <ProjectReference Include="..\ThisRestDL\ThisRestDL.csproj" />
-    <ProjectReference Include="..\UserModel\UserModel.csproj" />
   </ItemGroup>
 
 </Project>
