@@ -42,7 +42,7 @@ namespace ThisRestDL
         // as inserts, updates, and deletes to push to the database.
         public List<Restaurant> GetAllRestrauntsConnected()
         {
-            string commandString = "SELECT * FROM Restaurant;";
+            string commandString = "SELECT * FROM Restaurants;";
 
             // the connection (SqlConnection): represents a connection to a database.
             // needs a connection string to know how to connect and where the database is.
@@ -86,7 +86,7 @@ namespace ThisRestDL
 
         public List<Restaurant> GetRestaurants()
         {
-            string commandString = "SELECT * FROM Restaurant;";
+            string commandString = "SELECT * FROM Restaurants;";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
@@ -139,7 +139,7 @@ namespace ThisRestDL
 
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {
-            string commandString = "INSERT INTO Restaurant (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantAvgRating) " +
+            string commandString = "INSERT INTO Restaurants (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantAvgRating) " +
                 "VALUES (@restaurantName, @restaurantCity, @restaurantState, @restaurantZip, @restaurantAvgRating);";
 
             using SqlConnection connection = new(connectionString);
@@ -178,7 +178,7 @@ namespace ThisRestDL
         /// <returns>the added restaurants</returns>
         public Restaurant AddRestaurants(Restaurant restaurantToAdd)
         {
-            string commandString = "INSERT INTO Restaurant (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantReview ) " +
+            string commandString = "INSERT INTO Restaurants (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantReview ) " +
                 $"VALUES ({restaurantToAdd.RestaurantName}, thisTacoStand, {restaurantToAdd.RestaurantCity} Macomb, {restaurantToAdd.RestaurantState} IL, {restaurantToAdd.RestaurantZip}, {restaurantToAdd.RestaurantAvgRating};";
 
             using SqlConnection connection = new(connectionString);
