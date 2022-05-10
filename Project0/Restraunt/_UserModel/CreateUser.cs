@@ -15,7 +15,7 @@
         public CreateUser()
         {
             UserTagNumber++;
-            UserName = " Havelpot ";
+            UserName = "-";
             FirstName = "-";
             LastName = "-";
             Password = "-";
