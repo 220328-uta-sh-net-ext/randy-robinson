@@ -202,7 +202,23 @@ namespace ThisRestDL
 
             return createUser;
         }
-        public Review AddReview(Review) { }
+        public Review AddReview(Review review)
+        {
+            string commandString = "INSERT INTO Reviews (ReviewID, RestaurantName, UserName, Rating, Note) " +
+                     "VALUES (@reviewId, @restaurantName, @userName, @rate, @thisNote);";
+
+            using SqlConnection connection = new(connectionString);
+            using SqlCommand command = new(commandString, connection);
+            command.Parameters.AddWithValue("@reviewId", review.ReviewID++);
+            command.Parameters.AddWithValue("@restaurantName", review.RestaurantName);
+            command.Parameters.AddWithValue("@userName", review.UserName);
+            command.Parameters.AddWithValue("@rate", review.Rating);
+            command.Parameters.AddWithValue("@thisNote", review.Note);
+            connection.Open();
+            command.ExecuteNonQuery();
+
+            return review;
+        }
         /// <summary>
         /// The unsafe version.
         /// </summary>

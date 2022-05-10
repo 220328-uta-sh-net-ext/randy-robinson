@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestaurantModels;
+using ReviewModels;
+using UserModel;
 
 namespace ThisRestDL
 {
@@ -24,6 +26,29 @@ namespace ThisRestDL
         /// </summary>
         /// <returns>Returns a collection of Restaurants as Generic List</returns>
         List<Restaurant> GetRestaurants();
+        /// <summary>
+        /// This method returns all Reviews
+        /// </summary>
+        /// <returns></returns>
+        List<Review> GetReviews();
+
+        /// <summary>
+        /// This method adds a review
+        /// </summary>
+        /// <param name="review"></param>
+        /// <returns></returns>
+        Review AddReview(Review review);
+        /// <summary>
+        /// List all Users in the database
+        /// </summary>
+        /// <returns></returns>
+        List<CreateUser> createUsers();
+        /// <summary>
+        /// Adds User to Database
+        /// </summary>
+        /// <param name="createUser"></param>
+        /// <returns></returns>
+        CreateUser AddUser(CreateUser createUser);
 
 
     }

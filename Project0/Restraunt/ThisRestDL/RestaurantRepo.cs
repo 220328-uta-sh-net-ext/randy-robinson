@@ -61,18 +61,54 @@ namespace ThisRestDL
                 return System.Text.Json.JsonSerializer.Deserialize<List<Restaurant>>(jsonString)!;
             throw new InvalidDataException("json data missing or invalid");
         }
+        public CreateUser AddUser(CreateUser createUser)
+        {//throw new NotImplementedException();
 
-
-        public void AddReview(int restaurantId, ReviewModels.Review reviewToAdd)
+            List<CreateUser>? user = CreateUsers();
+            user.Add(createUser);
+            string? restaurantString = JsonSerializer.Serialize<List<CreateUser>>(user, new JsonSerializerOptions { WriteIndented = true });
+            try
+            {
+                File.WriteAllText(filePath + "Restaurants.json", restaurantString);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Please check the path, " + ex.Message);
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Please check the file name, " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return createUser;
+        }
+        public List<CreateUser> CreateUsers()
         {
-            throw new NotImplementedException();
+            try
+            {
+                jsonString = File.ReadAllText(filePath + "Users.json");
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Please check the path, " + ex.Message);
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Please check the file name, " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (!string.IsNullOrEmpty(jsonString))
+                return System.Text.Json.JsonSerializer.Deserialize<List<CreateUser>>(jsonString)!;
+            throw new InvalidDataException("json data missing or invalid");
         }
 
-        public List<Restaurant> SearchRestaurants(string searchTerm)
-        {
-            throw new NotImplementedException();
-        }
-
+        //No use ATM may delete later.
         public bool IsDuplicate(Restaurant restaurant)
         {
             throw new NotImplementedException();
