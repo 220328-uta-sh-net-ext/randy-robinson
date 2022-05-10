@@ -36,6 +36,7 @@ string connectionString = File.ReadAllText(connectionStringFilePath);
 
 IRestaurantRepo repository = new SqlRepository(connectionString);
 IRestaurantLogic logic = new RestaurantLogic(repository);
+IUserLogic ulogic = new UserLogic(repository);
 RestrauntOps operations = new(repository);
 
 bool repeat = true;
@@ -71,6 +72,17 @@ while (repeat)
             Log.CloseAndFlush();
             repeat = false;
             break;
+        case "SearchUser":
+            //Calling SearchUserMenu method
+            Log.Debug("Displaying SearchRestaurant menu to the user");
+            menu = new SearchUserMenu(ulogic);
+            break;
+        case "AddUser":
+            //Calling SearchUserMenu method
+            Log.Debug("Displaying SearchRestaurant menu to the user");
+            menu = new AddUserMenu(ulogic);
+            break;
+
         default:
             Console.WriteLine("View does not exist");
             Console.WriteLine("Please press <enter> to continue");
