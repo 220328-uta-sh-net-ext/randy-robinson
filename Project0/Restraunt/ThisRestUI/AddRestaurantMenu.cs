@@ -16,7 +16,7 @@ namespace ThisRestUI
     {
         //static non-access modifier is needed to keep this variable consistent to all objects we create out of our AddRestaurantMenu
         private static Restaurant newRestaurant = new Restaurant();
-        private static CreateUser newUser = new CreateUser();
+        //private static CreateUser newUser = new CreateUser();
         private static Review thisReview = new Review();
         private readonly IRestaurantLogic logic;
 
@@ -57,14 +57,13 @@ namespace ThisRestUI
                     catch (Exception ex)
                     {
                         Log.Warning("Failed to add the restaurant ");
-                        Console.WriteLine(ex.Message);
-
+                        Console.WriteLine(ex.Message);  
                     }
                     return "MainMenu";
                 case "2":
-                    Console.Write("Please enter a Review : 1 through 5 <5> being the highest review");
+                    Console.Write("Please enter a Review : 1 through 5 <5> being the highest review: ");
                     thisReview.Rating = Convert.ToInt32(Console.ReadLine());
-                    return "AddReview";
+                    return "AddRestaurant";
                 case "3":
                     Console.Write("Please enter a City name: ");
                     if (Console.ReadLine() is string input)
