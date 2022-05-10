@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThisRestDL", "ThisRestDL\Th
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThisRestBL", "ThisRestBL\ThisRestBL.csproj", "{DC0B67E2-E72B-4A2A-9F5B-E8BD069AC8BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserModel", "_UserModel\UserModel.csproj", "{BBF6859B-B04D-4B16-875B-5B5B8CA267FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserModel", "_UserModel\UserModel.csproj", "{BBF6859B-B04D-4B16-875B-5B5B8CA267FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPIStart", "RestAPIStart\RestAPIStart.csproj", "{F7A059AF-63DE-488C-A956-0EEDFCBA35B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{BBF6859B-B04D-4B16-875B-5B5B8CA267FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBF6859B-B04D-4B16-875B-5B5B8CA267FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBF6859B-B04D-4B16-875B-5B5B8CA267FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A059AF-63DE-488C-A956-0EEDFCBA35B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A059AF-63DE-488C-A956-0EEDFCBA35B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A059AF-63DE-488C-A956-0EEDFCBA35B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A059AF-63DE-488C-A956-0EEDFCBA35B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
