@@ -40,7 +40,7 @@ namespace ThisRestDL
 
         // it's also possible to modify the DataSet and then treat those changes
         // as inserts, updates, and deletes to push to the database.
-        public List<Restaurant> GetAllRestrauntsConnected()
+        public List<Restaurant> GetRestaurants()
         {
             string commandString = "SELECT * FROM Restaurants;";
 
@@ -84,7 +84,8 @@ namespace ThisRestDL
             return restaurant;
         }
         //Updating GetRestaurants to remove to possibility of DB interjection Using the above code to avoid casting errors.
-        public List<Restaurant> GetRestaurants()
+        // Changing names seemed to be an easier task.
+        public List<Restaurant> GetALLRestaurantsConnected()// not using might remove later
         {
             string commandString = "SELECT * FROM Restaurants;";
 
@@ -111,6 +112,8 @@ namespace ThisRestDL
             }
             return restaurants;
         }
+       
+        //Using the above addRestaurants above to re configure.
         public List<CreateUser> createUsers()
         {
             string commandString = "SELECT * FROM Users;";
