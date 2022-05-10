@@ -187,7 +187,7 @@ namespace ThisRestDL
         }
         public CreateUser AddUser(CreateUser createUser)
         {
-            string commandString = "INSERT INTO Users (UserTagNumber, UserName, FirstName, LastName) " +
+            string commandString = "INSERT INTO Users (UserTagNumber, UserName, FirstName, LastName, Password) " +
                      "VALUES (@userTag, @usrName, @userfirstName, @userLastName, @password);";
 
             using SqlConnection connection = new(connectionString);
