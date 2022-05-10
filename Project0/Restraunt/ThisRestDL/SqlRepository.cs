@@ -188,15 +188,15 @@ namespace ThisRestDL
         public CreateUser AddUser(CreateUser createUser)
         {
             string commandString = "INSERT INTO Users (UserTagNumber, UserName, FirstName, LastName) " +
-                     "VALUES (@userTag, @usrName, @firstName, @lastName);";
+                     "VALUES (@userTag, @usrName, @userfirstName, @userLastName, @password);";
 
             using SqlConnection connection = new(connectionString);
             using SqlCommand command = new(commandString, connection);
             command.Parameters.AddWithValue("@userTag", createUser.UserTagNumber++);
             command.Parameters.AddWithValue("@usrName", createUser.UserName);
-            command.Parameters.AddWithValue("@firstName", createUser.FirstName);
-            command.Parameters.AddWithValue("@lastName", createUser.LastName);
-            command.Parameters.AddWithValue("@lastName", createUser.Password);
+            command.Parameters.AddWithValue("@userfirstName", createUser.FirstName);
+            command.Parameters.AddWithValue("@userlastName", createUser.LastName);
+            command.Parameters.AddWithValue("@password", createUser.Password);
             connection.Open();
             command.ExecuteNonQuery();
 

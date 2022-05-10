@@ -16,7 +16,7 @@ namespace ThisRestUI
         public AddUserMenu(IUserLogic logic) { this.logic = logic; }
         public void Display()
         {
-            Console.WriteLine("Enter Restaurant Information");
+            Console.WriteLine("Enter User Information");
             Console.WriteLine("<5> User FirstName: " + newUser.FirstName);
             Console.WriteLine("<4> User LastName: " + newUser.LastName);
             Console.WriteLine("<3> User UserName: " + newUser.UserName);
