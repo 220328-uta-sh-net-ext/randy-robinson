@@ -83,7 +83,7 @@ namespace ThisRestDL
             }
             return restaurant;
         }
-
+        //Updating GetRestaurants to remove to possibility of DB interjection Using the above code to avoid casting errors.
         public List<Restaurant> GetRestaurants()
         {
             string commandString = "SELECT * FROM Restaurants;";

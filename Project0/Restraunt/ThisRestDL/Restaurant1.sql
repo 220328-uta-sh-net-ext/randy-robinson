@@ -5,7 +5,7 @@
 
 CREATE TABLE [dbo].[Users]
 (
-    [UserTagNumber] INT NULL,
+    [UserTagNumber] NVARCHAR(10) NULL,
     [Username] NVARCHAR(100) NOT NULL PRIMARY KEY,
     [FirstName] NVARCHAR(40) NULL,
     [LastName] NVARCHAR(50) NULL,
@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[Users]
 GO
 CREATE TABLE [dbo].[Restaurants]
 (
-   [RestaurantIdseed] INT NULL ,
+   [RestaurantIdseed] NVarChar(10) NULL ,
    [RestaurantName] NVARCHAR(50) not NULL Primary Key,
    [RestaurantCity] NVARCHAR(50) NULL,
    [RestaurantState] NVARCHAR(5) NULL,

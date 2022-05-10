@@ -18,7 +18,7 @@
             RestaurantCity = "Macomb";
             RestaurantState = "IL";
             RestaurantZip = 64155;
-            RestaurantIDseed++;
+            //RestaurantIDseed++;
 
         }
         public override string ToString()
