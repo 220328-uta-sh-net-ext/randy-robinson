@@ -72,7 +72,7 @@ while (repeat)
             Log.CloseAndFlush();
             repeat = false;
             break;
-        case "SearchUser":
+        case "SearchUsers":
             //Calling SearchUserMenu method
             Log.Debug("Displaying SearchRestaurant menu to the user");
             menu = new SearchUserMenu(ulogic);
