@@ -107,7 +107,51 @@ namespace ThisRestDL
                 return System.Text.Json.JsonSerializer.Deserialize<List<CreateUser>>(jsonString)!;
             throw new InvalidDataException("json data missing or invalid");
         }
-
+        public Review AddReview(Review review)
+        {
+            List<Review>? reviews = GetReviews();
+            reviews.Add(review);
+            string? restaurantString = JsonSerializer.Serialize<List<Review>>(reviews, new JsonSerializerOptions { WriteIndented = true });
+            try
+            {
+                File.WriteAllText(filePath + "Restaurants.json", restaurantString);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Please check the path, " + ex.Message);
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Please check the file name, " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return review;
+        }
+        public List<Review> GetReviews()
+        {
+            try
+            {
+                jsonString = File.ReadAllText(filePath + "Reviews.json");
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Please check the path, " + ex.Message);
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Please check the file name, " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (!string.IsNullOrEmpty(jsonString))
+                return System.Text.Json.JsonSerializer.Deserialize<List<Review>>(jsonString)!;
+            throw new InvalidDataException("json data missing or invalid");
+        }
         //No use ATM may delete later.
         public bool IsDuplicate(Restaurant restaurant)
         {

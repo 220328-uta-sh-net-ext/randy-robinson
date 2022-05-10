@@ -115,7 +115,7 @@ namespace ThisRestDL
         }
        
         //Using the above addRestaurants above to re configure.
-        public List<CreateUser> createUsers()
+        public List<CreateUser> CreateUsers()
         {
             string commandString = "SELECT * FROM Users;";
 

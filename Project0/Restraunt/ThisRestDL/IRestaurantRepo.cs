@@ -42,7 +42,7 @@ namespace ThisRestDL
         /// List all Users in the database
         /// </summary>
         /// <returns></returns>
-        List<CreateUser> createUsers();
+        List<CreateUser> CreateUsers();
         /// <summary>
         /// Adds User to Database
         /// </summary>
