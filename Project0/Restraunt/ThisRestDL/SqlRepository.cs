@@ -40,7 +40,7 @@ namespace ThisRestDL
 
         // it's also possible to modify the DataSet and then treat those changes
         // as inserts, updates, and deletes to push to the database.
-        public List<Restaurant> GetRestaurants()
+        public List<Restaurant> GetRestaurant()
         {
             string commandString = "SELECT * FROM Restaurants;";
 
@@ -85,7 +85,7 @@ namespace ThisRestDL
         }
         //Updating GetRestaurants to remove to possibility of DB interjection Using the above code to avoid casting errors.
         // Changing names seemed to be an easier task.
-        public List<Restaurant> GetALLRestaurantsConnected()// not using might remove later
+        public List<Restaurant> GetRestaurants()
         {
             string commandString = "SELECT * FROM Restaurants;";
 
@@ -98,16 +98,17 @@ namespace ThisRestDL
             connection.Close();
 
             var restaurants = new List<Restaurant>();
-            DataColumn ratingColumn = dataSet.Tables[0].Columns[2];
+            
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
+                //Make sure that this matches the Table created.
                 restaurants.Add(new Restaurant
                 {
-                    RestaurantName = (string)row[0],
-                    RestaurantAvgRating = (int)row[ratingColumn],
-                    RestaurantCity = (string)row[3],
-                    RestaurantState = (string)row[4],
-                    RestaurantZip = (int)row[5]
+                    RestaurantName = (string)row[1],
+                    RestaurantCity = (string)row[2],
+                    RestaurantState = (string)row[3],
+                    RestaurantZip = (int)row[4],
+                    RestaurantAvgRating = (int)row[5],
                 });
             }
             return restaurants;
@@ -127,19 +128,46 @@ namespace ThisRestDL
             connection.Close();
 
             var usersList = new List<CreateUser>();
-            DataColumn userColumn = dataSet.Tables[0].Columns[2];
+
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
                 usersList.Add(new CreateUser                 {
-                    UserTagNumber= (int)row[userColumn],
-                    UserName = (string)row[3],
-                    FirstName= (string)row[4],
-                    LastName= (string)row[5]
+                    UserTagNumber= (int)row[0],
+                    UserName = (string)row[1],
+                    FirstName= (string)row[2],
+                    LastName= (string)row[3],
+                    Password= (string)row[4]
                 });
             }
             return usersList;
         }
+        public List<Review> GetReviews()
+        {
+            string commandString = "SELECT * FROM Reviews;";
 
+            using SqlConnection connection = new(connectionString);
+            using SqlCommand command = new(commandString, connection);
+            IDataAdapter adapter = new SqlDataAdapter(command);
+            DataSet dataSet = new();
+            connection.Open();
+            adapter.Fill(dataSet); // this sends the query. DataAdapter uses a DataReader to read.
+            connection.Close();
+
+            var review = new List<Review>();
+
+            foreach (DataRow row in dataSet.Tables[0].Rows)
+            {
+                //Make sure that this matches the Table created.
+                review.Add(new Review
+                {
+                    RestaurantName = (string)row[1],
+                    UserName = (string)row[2],
+                    Rating = (int)row[3],
+                    Note = (string)row[4] 
+                });
+            }
+            return review;
+        }
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {
             string commandString = "INSERT INTO Restaurants (RestaurantName, RestaurantCity, RestaurantState, RestaurantZip, RestaurantAvgRating) " +
@@ -168,12 +196,13 @@ namespace ThisRestDL
             command.Parameters.AddWithValue("@usrName", createUser.UserName);
             command.Parameters.AddWithValue("@firstName", createUser.FirstName);
             command.Parameters.AddWithValue("@lastName", createUser.LastName);
+            command.Parameters.AddWithValue("@lastName", createUser.Password);
             connection.Open();
             command.ExecuteNonQuery();
 
             return createUser;
         }
-
+        public Review AddReview(Review) { }
         /// <summary>
         /// The unsafe version.
         /// </summary>
