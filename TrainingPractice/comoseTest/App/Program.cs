@@ -1,9 +1,23 @@
-﻿
-//This will count number every second.
-var counter = 0;
-var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-while (max == -1 || counter < max)
-{
-    Console.WriteLine($"Counter: {++counter}");
-    await Task.Delay(TimeSpan.FromMilliseconds(1_000));
-}
+﻿import time
+
+import redis
+from flask import Flask
+
+app = Flask(__name__)
+cache = redis.Redis(host='redis', port=6379)
+
+def get_hit_count():
+    retries = 5
+    while True:
+        try:
+            return cache.incr('hits')
+        except redis.exceptions.ConnectionError as exc:
+            if retries == 0:
+                raise exc
+            retries -= 1
+            time.sleep(0.5)
+
+@app.route('/')
+def hello():
+    count = get_hit_count()
+    return 'Hello World! I have been seen {} times.\n'.format(count)
