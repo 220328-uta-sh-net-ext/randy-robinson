@@ -36,5 +36,6 @@ namespace ThisRestBL
         /// <param name="logic"></param>
         /// <returns></returns>
         Restaurant AddRestaurantMenu(IRestaurantLogic logic);
+
     }
 }
