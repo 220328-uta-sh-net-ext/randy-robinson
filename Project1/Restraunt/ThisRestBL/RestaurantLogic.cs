@@ -42,6 +42,15 @@ namespace ThisRestBL
             logic = this.logic;
             throw new Exception(" ----- ");
         }
+        public List<Restaurant> SearchAllRestaurants() 
+        {
+            return repo.GetRestaurants();
+        }
+        
+        public async Task<List<Restaurant>> SearchAllRestaurantsAsync()
+        {
+            return await repo.GetAllRestaurantsAsync();
+        }
 
         public List<Restaurant> SearchRestaurant(string name)
         {

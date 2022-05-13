@@ -7,7 +7,7 @@ using RestaurantModels;
 
 namespace ThisRestBL
 {
-    public interface IRestaurantLogic
+    public interface IRestaurantLogic : IRestaurantSearch
     {
         /// <summary>
         /// Business Layer is responsible for further validation or processing of data obtained from either the database or the user
@@ -37,5 +37,15 @@ namespace ThisRestBL
         /// <returns></returns>
         Restaurant AddRestaurantMenu(IRestaurantLogic logic);
 
+    }
+    public interface IRestaurantSearch
+    {
+        /// <summary>
+        /// Async method to return all Restaurants from DB. 
+        /// Need to use Key word Await
+        /// </summary>
+        /// <returns>List<Restaurants></returns>
+        Task<List<Restaurant>> SearchAllRestaurantsAsync();
+        List<Restaurant> SearchAllRestaurants();
     }
 }

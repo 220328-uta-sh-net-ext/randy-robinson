@@ -40,31 +40,21 @@ namespace ThisRestDL
 
         // it's also possible to modify the DataSet and then treat those changes
         // as inserts, updates, and deletes to push to the database.
-        public List<Restaurant> GetRestaurant()
+        public async Task<List<Restaurant>> GetAllRestaurantsAsync()
         {
             string commandString = "SELECT * FROM Restaurants;";
-
-            // the connection (SqlConnection): represents a connection to a database.
-            // needs a connection string to know how to connect and where the database is.
-            // can Open and Close the connection. is IDisposable so you can have it automatically
-            // close with the help of a using statement.
             using SqlConnection connection = new(connectionString);
-            // the command (SqlCommand): encapsulates some SQL commands to send.
+            /// the command (SqlCommand): encapsulates some SQL commands to send.
             //  it supports using SqlParameters for protecting from SQL injection.
-            using IDbCommand command = new SqlCommand(commandString, connection);
-            connection.Open();
-            // the data reader (SqlDataReader): represents a response to a SqlCommand
-            // having 1 or more result sets (because of 1 or more SELECT statements).
-            // the data reader provides each row of the data immediately as it's
-            // received over the network.
-            using IDataReader reader = command.ExecuteReader();
-
+            using SqlCommand command = new(commandString, connection);
+            await connection.OpenAsync();
+            using SqlDataReader reader = await command.ExecuteReaderAsync();
             
             var restaurant = new List<Restaurant>();
             //var newUser= new List<CreateUser>();
             // reader.Read advances the "cursor" to the next row
             // and returns true if it's not at the end of the data.
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 // different ways to access the data in the current row
                 // - reader[columnName]
@@ -78,7 +68,8 @@ namespace ThisRestDL
                     RestaurantAvgRating = reader.GetInt32(2),
                     RestaurantCity = reader.GetString(3),
                     RestaurantState = reader.GetString(4),
-                    RestaurantZip = reader.GetInt32(5)
+                    RestaurantZip = reader.GetInt32(5),
+                    RestaurantIDseed= reader.GetInt32(6)
                 });
             }
             return restaurant;
@@ -242,5 +233,48 @@ namespace ThisRestDL
 
             return restaurantToAdd;
         }
+        public async Task<List<Restaurant>> SearchAllRestaurantsAsync()
+        {
+            string commandString = "SELECT * FROM Restaurants;";
+            using SqlConnection connection = new(connectionString);
+            /// the command (SqlCommand): encapsulates some SQL commands to send.
+            //  it supports using SqlParameters for protecting from SQL injection.
+            using SqlCommand command = new(commandString, connection);
+            IDataAdapter adapter = new SqlDataAdapter(command);
+            DataSet dataSet = new();
+            try
+            {
+                await connection.OpenAsync();
+                adapter.Fill(dataSet);
+            }
+            catch (SqlException ex)
+            {
+                System.Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            var restaurant = new List<Restaurant>();
+            //var newUser= new List<CreateUser>();
+            // reader.Read advances the "cursor" to the next row
+            // and returns true if it's not at the end of the data.
+            foreach (DataRow row in dataSet.Tables[0].Rows)
+            {
+                //Make sure that this matches the Table created.
+                restaurant.Add(new Restaurant
+                {
+                    RestaurantName = (string)row[1],
+                    RestaurantCity = (string)row[2],
+                    RestaurantState = (string)row[3],
+                    RestaurantZip = (int)row[4],
+                    RestaurantAvgRating = (int)row[5],
+                });
+            }
+            return restaurant;
+        }
+         
+     
     }
 }

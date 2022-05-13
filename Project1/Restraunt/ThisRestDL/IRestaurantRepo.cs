@@ -22,6 +22,12 @@ namespace ThisRestDL
         /// <returns> The Restaurant added </returns>
         Restaurant AddRestaurant(Restaurant restaurantToAdd);
         /// <summary>
+        /// This is an Async call to get all restaurants
+        /// </summary>
+        /// <returns></returns>
+        Task<List<Restaurant>> GetAllRestaurantsAsync();
+
+        /// <summary>
         /// This method returns all the Restaurants from the database
         /// </summary>
         /// <returns>Returns a collection of Restaurants as Generic List</returns>

@@ -152,8 +152,7 @@ namespace ThisRestDL
                 return System.Text.Json.JsonSerializer.Deserialize<List<Review>>(jsonString)!;
             throw new InvalidDataException("json data missing or invalid");
         }
-        //No use ATM may delete later.
-        public bool IsDuplicate(Restaurant restaurant)
+        public Task<List<Restaurant>> GetAllRestaurantsAsync()
         {
             throw new NotImplementedException();
         }
