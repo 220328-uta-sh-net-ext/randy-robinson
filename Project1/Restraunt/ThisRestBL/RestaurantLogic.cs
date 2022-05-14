@@ -25,7 +25,7 @@ namespace ThisRestBL
         {
 
             //Validation process
-            List<Restaurant> restaurants = repo.GetRestaurants();
+            List<Restaurant>? restaurants = repo.GetRestaurants();
             
             if (restaurants.Count < MaxRestaurant)
             {

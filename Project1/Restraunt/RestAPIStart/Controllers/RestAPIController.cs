@@ -41,7 +41,7 @@ namespace RestAPIStart.Controllers
             try
             {
                 if (!memoryCache.TryGetValue("restList", out restaurants)) {
-                    restaurants = createRestaurant.SearchAllRestaurantsAsync();
+                    restaurants= createRestaurant.SearchAllRestaurants();
                     memoryCache.Set("restList", restaurants, new TimeSpan(0,1,0));
                 }                
             }

@@ -12,7 +12,7 @@
         public Restaurant()
         {
             RestaurantName = "-";
-            RestaurantAvgRating = 0;s
+            RestaurantAvgRating = 0;
             RestaurantCity = "Macomb";
             RestaurantState = "IL";
             RestaurantZip = 64155;
