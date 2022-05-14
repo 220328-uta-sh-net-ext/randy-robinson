@@ -14,7 +14,7 @@
         private enum UserEnum { Admin = 0, RegUser = 1, }
         public CreateUser()
         {
-            UserTagNumber++;
+            UserTagNumber= UserTagNumber++;
             UserName = "-";
             FirstName = "-";
             LastName = "-";
