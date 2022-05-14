@@ -8,7 +8,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using RestAPIStart;
+using RestAPIStart.Repository;
 
 namespace RestAPIStart.Controllers
 {

@@ -3,6 +3,6 @@ namespace RestAPIStart.Repository
 {
     public interface IJWTManagerRepository
     {
-        Tokens Authenticate(UserForTokens user);
+        TokensPassed Authenticate(UserForTokens user);
     }
 }

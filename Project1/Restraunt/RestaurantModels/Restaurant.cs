@@ -2,9 +2,8 @@
 {
     public class Restaurant
     {
-        private int restaurantRating;
+        
         public string RestaurantName { get; set; }
-        public int ReviewCount { get; }
         public int RestaurantAvgRating { get ; set; }
         public string RestaurantCity { get; set; }
         public string RestaurantState { get; set; }
@@ -13,11 +12,11 @@
         public Restaurant()
         {
             RestaurantName = "-";
-            RestaurantAvgRating = 0;
+            RestaurantAvgRating = 0;s
             RestaurantCity = "Macomb";
             RestaurantState = "IL";
             RestaurantZip = 64155;
-            RestaurantIDseed++;
+            RestaurantIDseed= RestaurantIDseed++;
 
         }
         public override string ToString()
