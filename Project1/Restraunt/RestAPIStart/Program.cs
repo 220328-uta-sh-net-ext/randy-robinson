@@ -35,15 +35,19 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = false,
     };
 });
+builder.Services.AddMemoryCache();
+builder.Services.AddControllers(options =>
+    options.RespectBrowserAcceptHeader = true
+    ).AddXmlSerializerFormatters();
 
-
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<IRestaurantRepo>(repo => new SqlRepository(connectionString));
+builder.Services.AddScoped<IRestaurantLogic, RestaurantLogic>();
+builder.Services.AddSingleton<IJWTManagerRepository, JWTManagerRepository>();
+// The below var relates to the 'app' using pipeline middleware
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -52,9 +56,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
