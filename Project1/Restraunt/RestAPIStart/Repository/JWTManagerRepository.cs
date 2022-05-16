@@ -24,7 +24,7 @@ namespace RestAPIStart.Repository
             }
             //We need to check the Dictionary to see if the User exists from the Database
             var tokenHandler= new JwtSecurityTokenHandler();
-            var tokenKey= Encoding.UTF8.GetBytes(configuration["JWT: Key"]);
+            var tokenKey= Encoding.UTF8.GetBytes(configuration["JWT:Key"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new System.Security.Claims.ClaimsIdentity(
