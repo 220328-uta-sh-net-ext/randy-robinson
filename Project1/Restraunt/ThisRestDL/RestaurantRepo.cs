@@ -10,8 +10,8 @@ namespace ThisRestDL
 {
     public class RestaurantRepo : IRestaurantRepo
     {
-
-        readonly string filePath = "../../../../ThisRestDL/Database/thisCommandString.txt";
+        //C:\Revature\randy-robinson\Project1\Restraunt
+        readonly string filePath = "../ThisRestDL/Database/thisCommandString.txt";
         string? jsonString;
         public Restaurant AddRestaurant(Restaurant restaurantToAdd)
         {//throw new NotImplementedException();

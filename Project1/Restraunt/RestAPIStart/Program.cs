@@ -5,8 +5,8 @@ using ThisRestBL;
 using ThisRestDL;
 using System.Text;
 
-
-string connectionStringFilePath = "../../../../ThisRestDL/Database/thisCommandString.txt";
+//"C:\Revature\randy-robinson\Project1\Restraunt\ThisRestDL\Database\thisCommandString.txt"
+string connectionStringFilePath = "../ThisRestDL/Database/thisCommandString.txt";
 string connectionString = File.ReadAllText(connectionStringFilePath);
 
 var builder = WebApplication.CreateBuilder(args);
