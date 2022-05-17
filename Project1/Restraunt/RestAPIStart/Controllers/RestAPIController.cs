@@ -35,8 +35,9 @@ namespace RestAPIStart.Controllers
         ///  Need a way to create Web Tabs to manipulate resources?? use these:
         /// </summary>
         /// </returns> This is the Get operator </returns>
-
-        [Authorize]
+        //The authenticate token below is commented out for App usability and for my own
+        //sanity. Everything is currently public and everyone has access to change information
+        //[Authorize]
         [HttpGet] //This is the Get operator
         [ProducesResponseType(200, Type = typeof(List<Restaurant>))]
         public ActionResult<List<Restaurant>> Get()
