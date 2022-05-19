@@ -7,6 +7,9 @@ on:   # my trigger events
     branches: [ main ]
   workflow_dispatch: # To manually trigger the workflow
 
+env:
+  WORKING_DIR: Project1/Restraunt
+
 jobs:
   build:
     # Which OS do you want to run this action on:
@@ -19,8 +22,39 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore Project1/Restraunt/RestAPIStart
+      run: dotnet restore ${{env.WORKING_DIR}}/RestAPIStart
     - name: Build
-      run: dotnet build --no-restore Project1/Restraunt/RestAPIStart
+      run: dotnet build --no-restore ${{env.WORKING_DIR}}/RestAPIStart
     - name: Test
-      run: dotnet test --no-build --verbosity normal Project1/Restraunt/RestAPIStart
+      run: dotnet test --no-build --verbosity normal ${{env.WORKING_DIR}}
+
+docker-image-build:
+  runs-on: ubuntu-latest
+  
+  steps:
+  - uses: actions/checkout@v3
+  
+  - name: Docker Setup Buildx
+    uses: docker/setup-buildx-action@v2.0.0
+  - name: Docker Login
+  # You may pin to the exact commit or the version.
+  # uses: docker/login-action@49ed152c8eca782a232dede0303416e8f356c37b
+  uses: docker/login-action@v2.0.0
+  with:
+    # Username used to log against the Docker registry
+    username: ${{secrets.DOCKER_USN}}
+    # Password or personal access token used to log against the Docker registry
+    password: ${{secrets.DOCKER_PASS}}
+  
+  - name: Build and push Docker images
+  # You may pin to the exact commit or the version.
+  # uses: docker/build-push-action@e551b19e49efd4e98792db7592c17c09b89db8d8
+  uses: docker/build-push-action@v3.0.0
+  with:
+    # Path to the Dockerfile
+    file: ${{env.WORKING_DIR}}/RestAPIStart/Dockerfile
+    # Push here is shorthand for --output=type=registry
+    push: true
+    # List of tags
+    tags: index.docker.io/${{secrets.DOCKER_USN}}/restapistart: ${{github.sha}}
+    
