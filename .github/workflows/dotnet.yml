@@ -1,0 +1,26 @@
+name: .NET
+
+on:   # my trigger events
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # To manually trigger the workflow
+
+jobs:
+  build:
+    # Which OS do you want to run this action on:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET # Downloading and installing .Net SDK
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore Project1/Restraunt/RestAPIStart
+    - name: Build
+      run: dotnet build --no-restore Project1/Restraunt/RestAPIStart
+    - name: Test
+      run: dotnet test --no-build --verbosity normal Project1/Restraunt/RestAPIStart
