@@ -10,8 +10,14 @@ namespace WinningNumbersUI
     {
         public string MenuName { get; set; }    
         public string MenuDescription { get; set; } 
-        public int MenuIndex { get; set; }
+        public int MenuIndexKey { get; set; }
+        public NumberMenu()
+        {
 
-        Console.WriteLine("Welcome to the Lottery Number Generator: ");
+            MenuName = MenuName;
+            MenuDescription = MenuDescription;
+            MenuIndexKey = MenuIndexKey;
+        }
+            //Console.WriteLine("Welcome to the Lottery Number Generator: ");
     }
 }

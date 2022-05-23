@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinningNumbersUI", "WinningNumbersUI\WinningNumbersUI.csproj", "{17C86FE8-9E67-407C-AFDD-24275979C2E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinningNumbersUI", "WinningNumbersUI\WinningNumbersUI.csproj", "{17C86FE8-9E67-407C-AFDD-24275979C2E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberLogic", "NumberLogic\NumberLogic.csproj", "{79C142A7-CB1F-4D80-AE2E-342242DCF615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{17C86FE8-9E67-407C-AFDD-24275979C2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C86FE8-9E67-407C-AFDD-24275979C2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C86FE8-9E67-407C-AFDD-24275979C2E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C142A7-CB1F-4D80-AE2E-342242DCF615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C142A7-CB1F-4D80-AE2E-342242DCF615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C142A7-CB1F-4D80-AE2E-342242DCF615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C142A7-CB1F-4D80-AE2E-342242DCF615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
