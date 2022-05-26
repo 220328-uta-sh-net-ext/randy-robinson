@@ -6,6 +6,7 @@ import { ThisHomePageModule } from './this-home-page/this-home-page.module';
 import { ThisWebPageComponent } from './this-web-page/this-web-page.component';
 import { EarthHomeModule } from './earth-home/earth-home.module';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     ThisHomePageModule,
     FormsModule,
-    EarthHomeModule
+    EarthHomeModule,
+    Router
   ],
   providers: [],
   bootstrap: [AppComponent]
