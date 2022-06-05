@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Bank
 {
     [Serializable()]
-    public class Loan : INotifyPropertyChanged
+    public class Loan // : INotifyPropertyChanged
     {
         public double LoanAmount { get; set; }
         public double InterestRatePercent { get; set; }
