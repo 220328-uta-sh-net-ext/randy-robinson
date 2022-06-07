@@ -2,6 +2,7 @@
   "dependencies": {
     "@okta/okta-angular": "5.1",
     "@okta/okta-auth-js": "6.0",
+    "@okta/okta-signin-widget": "^6.4.0",
     "socket.io": "^4.5.1"
   }
 }
