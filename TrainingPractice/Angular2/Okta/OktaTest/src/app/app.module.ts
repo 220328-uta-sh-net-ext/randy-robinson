@@ -11,7 +11,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://dev-77390416.okta.com/oauth2/default',
-  clientId: '0oa5afwmcm1PkMWX75d7',
+  clientId: '0oa5atmbm5OowqftN5d7',
   redirectUri: window.location.origin + '/login/callback'
 });
 
@@ -21,7 +21,7 @@ const oktaAuth = new OktaAuth({
     AppComponent,
     ProfileComponent,
 //---- When I was Debugging the OktaTest App noticed that secure module was added twice. 
-//---- Commenting out referance to SecureComponent in delaration field and imports.    
+//---- Commenting out referance to SecureComponent in declaration field and imports.    
 //---- SecureComponent, 
   ],
   imports: [
