@@ -34,6 +34,7 @@ const oktaAuth = new OktaAuth({
     { provide: OKTA_CONFIG, useValue: { oktaAuth } },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
+  //matcher: [(url)=>{}], ---- decided not to build more onto this demo.
   bootstrap: [AppComponent],
   
 })
