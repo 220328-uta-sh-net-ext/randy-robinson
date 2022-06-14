@@ -1,0 +1,7 @@
+<navbar></navbar>
+<mat-slide-toggle
+ [checked]="isDarkTheme | async"
+  (change)="toggleDarkTheme($event.checked)">Dark theme
+</mat-slide-toggle>
+<router-outlet></router-outlet>
+
