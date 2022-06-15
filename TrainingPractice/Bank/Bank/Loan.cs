@@ -24,7 +24,7 @@ namespace Bank
             set
             {
                 customer = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Customer)));
+               // PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Customer)));
             }
         }
 
