@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
+//import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
 import { LoginComponent } from './login/login.component';
 import { FileocrComponent } from './fileocr/fileocr.component';
 import { OKTA_CONFIG } from '@okta/okta-angular';
@@ -16,7 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthInterceptor } from './auth.interceptor';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { LearningWordsComponent } from './learning-words/learning-words.component';
+//import { LearningWordsComponent } from './learning-words/learning-words.component';
 import { ThemeService } from './theme.service';
 import { LeaderBoardComponent } from './leader-board/leader-board.component';
 
@@ -36,11 +36,11 @@ const oktaAuth = new OktaAuth({
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SpeechToTextComponent,
+  //  SpeechToTextComponent,
     LoginComponent,
     FileocrComponent,
     ProfileComponent,
-    LearningWordsComponent,
+   // LearningWordsComponent,
     LeaderBoardComponent,
     
 
