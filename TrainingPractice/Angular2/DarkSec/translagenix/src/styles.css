@@ -1,5 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-html, body { height: 100%; background-color: #d0e1f9;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* You can add global styles to this file, and also import other style files */ody {
+  --primary-color: #d0e1f9;
+  --primary-lighter-color: #f1f6fd;
+  --primary-darker-color: #bed5f6;
+  --text-primary-color: #{$dark-primary-text};
+  --text-primary-lighter-color: #{$dark-primary-text};
+  --text-primary-darker-color: #{$dark-primary-text};
+}
