@@ -10,7 +10,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
 import { LoginComponent } from './login/login.component';
 import { FileocrComponent } from './fileocr/fileocr.component';
-import { OktaAuthModule, OKTA_CONFIG } from '@okta/okta-angular';
+import { OKTA_CONFIG } from '@okta/okta-angular';
 import { OktaAuth } from '@okta/okta-auth-js';
 import { ProfileComponent } from './profile/profile.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -42,6 +42,7 @@ const oktaAuth = new OktaAuth({
     ProfileComponent,
     LearningWordsComponent,
     LeaderBoardComponent,
+    
 
   ],
   imports: [
@@ -49,7 +50,6 @@ const oktaAuth = new OktaAuth({
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    OktaAuthModule,
     MatSlideToggleModule,
     MatToolbarModule,
   ],
