@@ -17,6 +17,7 @@ const routes:Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'FileOCR', component: FileocrComponent},
   {path: 'LeaderBoard', component: LeaderBoardComponent},
+ // commenting out to remove errors for dark mode test.
   {path: 'SpeechToText', component: SpeechToTextComponent}, 
   {path: 'LearningWords', component: LearningWordsComponent}, 
   {path: 'protected',
