@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>myNumbers</Name>
+    <Signature>(Ljava/lang/Number;)Ljava/lang/Number;</Signature>
+    <DeclaringType>ProcessInFixFromFile</DeclaringType>
+    <Depth>2</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>410</X>
+      <Y>130</Y>
+      <W>318</W>
+      <H>168</H>
+    </Bounds>
+    <PanelSize>
+      <Key>jgrasp_viewers.java__lang__Object_LinkedView0</Key>
+      <Order>4</Order>
+      <W>324</W>
+      <H>202</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local net.datastructures.Stack` myNumberStack</Expression>
+      <ViewerClass>jgrasp_viewers.java__lang__Object_LinkedView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>120</X>
+      <Y>210</Y>
+      <W>158</W>
+      <H>88</H>
+    </Bounds>
+    <PanelSize>
+      <Key>jgrasp_viewers._X_ElementView0</Key>
+      <Order>4</Order>
+      <W>164</W>
+      <H>122</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.lang.Number` nums</Expression>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>960</W>
+    <H>540</H>
+  </Size>
+  <ESize>
+    <W>960</W>
+    <H>540</H>
+  </ESize>
+</Canvas>

@@ -45,6 +45,7 @@ border: 2pt solid darkblue;
 background-color: cyan;
 color: black
 }
+
 :root {
     height: 100%;
     --bg: #FAFAFA;
